@@ -1,0 +1,78 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>DNA Viewer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/nucleicacid.js"></script>
+    <script type="text/javascript" src="js/design.js"></script>
+    <script type="text/javascript" src="js/placer.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+<body onload="onLoad()" onresize="onResize()" style="margin:0px;">
+    <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 400 200" oncontextmenu="onSwitchSvg2Text(event)"></svg>
+    <div id="editNav">
+        <textarea id="editNavText"></textarea>
+        <label>
+            <div><b>Start Mapping</b></div>
+            <input type="button" value="Start Mapping" onClick="onTextEditDone()" />
+        </label>
+    </div>
+    <div id="control">
+        <input type="checkbox" id="controlShowInput" />
+        <label for="controlShowInput">
+            <div class="menu" id="controlShow"><p class="show_or_not">Click to Show/Hide Controls</p></div>
+        </label>
+
+        <div class="menu" id="selectFile">
+            <p>Select Files</p>
+            <p>Select Rebase File ----- <input type="file" id="rebaseFile" size="50"></p>
+            <p>Select Sequence File -- <input type="file" id="sequenceFile" size="50"></p>
+            <label>
+                <div><b>Start Mapping</b></div>
+                <input type="button" value="Start Mapping" onClick="filesSelected()" />
+            </label>
+        </div>
+        <div class="menu" id="selectEnzyme">
+            <p>Enzyme Options</p>
+            <p>
+                Select Enzyme
+                <select name="Enzyme" onchange="enzymeChanged()" id="EnzymeSelect">
+                    <optgroup label="1 match" id="singleMatch">
+                    </optgroup>
+                    <optgroup label="2-3 matches" id="severalMatch">
+                    </optgroup>
+                    <optgroup label="more matches" id="manyMatch">
+                    </optgroup>
+                </select>
+                Hide Except all
+                <input type="checkbox" id="exceptCheck" value="Except" />
+            </p>
+            <div class="radios">
+                <label>
+                    <input type="radio" name="option" onClick="enzymeOptionClicked(1)" class="EO" />
+                    <div>Inner Ring</div>
+                </label>
+                <label>
+                    <input type="radio" name="option" onClick="enzymeOptionClicked(2)" class="EO" />
+                    <div>Outer Ring</div>
+                </label>
+                <label>
+                    <input type="radio" name="option" onClick="enzymeOptionClicked(3)" class="EO">
+                    <div>Outer Bold</div>
+                </label>
+                <label>
+                    <input type="radio" name="option" onClick="enzymeOptionClicked(4)" class="EO">
+                    <div>Do Not Show</div>
+                </label>
+            </div>
+        </div>
+
+        <div class="menu" id="saveImage">
+            <p>Save Image</p>
+            <p><a id="save1">Download nav file</a></p>
+            <p><a id="save2">Download Image</a></p>
+        </div>
+
+    </div>
+</body>
+</html>
