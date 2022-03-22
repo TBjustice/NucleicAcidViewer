@@ -1,0 +1,500 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-200 0 400 200">
+<text x="0" y="10" font-size="8" text-anchor="middle" >Random Sequence</text>
+<text x="0" y="20" font-size="7" text-anchor="middle" >5000Bp</text>
+<line x1 ="-180" y1="70" x2="180" y2="70" stroke="black" stroke-width="2" ></line>
+<text x="-160.38" y="90" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(270 -160.38,90)" >AcyI:322</text>
+<line x1 ="-160.38" y1="90" x2="-160.38" y2="85" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-160.38" y1="85" x2="-156.888" y2="80" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-156.888" y1="80" x2="-156.888" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-154.98" y="90" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(270 -154.98,90)" >StyI:397</text>
+<line x1 ="-154.98" y1="90" x2="-154.98" y2="85" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-154.98" y1="85" x2="-151.488" y2="80" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-151.488" y1="80" x2="-151.488" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-149.57999999999998" y="90" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(270 -149.57999999999998,90)" >AvrII:397</text>
+<line x1 ="-149.57999999999998" y1="90" x2="-149.57999999999998" y2="85" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-149.57999999999998" y1="85" x2="-151.488" y2="80" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-151.488" y1="80" x2="-151.488" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-144.18" y="90" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(270 -144.18,90)" >TaqII:428</text>
+<line x1 ="-144.18" y1="90" x2="-144.18" y2="85" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-144.18" y1="85" x2="-149.256" y2="80" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-149.256" y1="80" x2="-149.256" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-122.256" y="90" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(270 -122.256,90)" >BtgZI:803</text>
+<line x1 ="-122.256" y1="90" x2="-122.256" y2="85" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-122.256" y1="85" x2="-122.256" y2="80" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-122.256" y1="80" x2="-122.256" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-110.52" y="90" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(270 -110.52,90)" >NmeAIII:966</text>
+<line x1 ="-110.52" y1="90" x2="-110.52" y2="85" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-110.52" y1="85" x2="-110.52" y2="80" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-110.52" y1="80" x2="-110.52" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-57.599999999999994" y="90" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(270 -57.599999999999994,90)" >BtrI:1701</text>
+<line x1 ="-57.599999999999994" y1="90" x2="-57.599999999999994" y2="85" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-57.599999999999994" y1="85" x2="-57.599999999999994" y2="80" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-57.599999999999994" y1="80" x2="-57.599999999999994" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="11.73599999999999" y="90" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(270 11.73599999999999,90)" >AccI:2664</text>
+<line x1 ="11.73599999999999" y1="90" x2="11.73599999999999" y2="85" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="11.73599999999999" y1="85" x2="11.73599999999999" y2="80" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="11.73599999999999" y1="80" x2="11.73599999999999" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="18.21599999999998" y="90" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(270 18.21599999999998,90)" >NspI:2754</text>
+<line x1 ="18.21599999999998" y1="90" x2="18.21599999999998" y2="85" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="18.21599999999998" y1="85" x2="18.21599999999998" y2="80" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="18.21599999999998" y1="80" x2="18.21599999999998" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="45.50399999999999" y="90" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(270 45.50399999999999,90)" >Hpy99I:3133</text>
+<line x1 ="45.50399999999999" y1="90" x2="45.50399999999999" y2="85" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="45.50399999999999" y1="85" x2="45.50399999999999" y2="80" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="45.50399999999999" y1="80" x2="45.50399999999999" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="53.78399999999999" y="90" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(270 53.78399999999999,90)" >BsrI:3248</text>
+<line x1 ="53.78399999999999" y1="90" x2="53.78399999999999" y2="85" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="53.78399999999999" y1="85" x2="53.78399999999999" y2="80" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="53.78399999999999" y1="80" x2="53.78399999999999" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="65.80799999999999" y="90" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(270 65.80799999999999,90)" >BstEII:3415</text>
+<line x1 ="65.80799999999999" y1="90" x2="65.80799999999999" y2="85" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="65.80799999999999" y1="85" x2="65.80799999999999" y2="80" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="65.80799999999999" y1="80" x2="65.80799999999999" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="149.86799999999994" y="90" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(270 149.86799999999994,90)" >Esp3I:4614</text>
+<line x1 ="149.86799999999994" y1="90" x2="149.86799999999994" y2="85" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="149.86799999999994" y1="85" x2="152.13599999999997" y2="80" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="152.13599999999997" y1="80" x2="152.13599999999997" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="155.26799999999997" y="90" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(270 155.26799999999997,90)" >BsgI:4626</text>
+<line x1 ="155.26799999999997" y1="90" x2="155.26799999999997" y2="85" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="155.26799999999997" y1="85" x2="153" y2="80" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="153" y1="80" x2="153" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-172.48799999999997" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -172.48799999999997,50)" >BciVI:13</text>
+<line x1 ="-172.48799999999997" y1="50" x2="-172.48799999999997" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-172.48799999999997" y1="55" x2="-179.136" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-179.136" y1="60" x2="-179.136" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-167.08799999999997" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -167.08799999999997,50)" >Eco31I:57</text>
+<line x1 ="-167.08799999999997" y1="50" x2="-167.08799999999997" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-167.08799999999997" y1="55" x2="-175.968" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-175.968" y1="60" x2="-175.968" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-161.68799999999996" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -161.68799999999996,50)" >BsmAI:57</text>
+<line x1 ="-161.68799999999996" y1="50" x2="-161.68799999999996" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-161.68799999999996" y1="55" x2="-175.968" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-175.968" y1="60" x2="-175.968" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-156.28799999999998" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -156.28799999999998,50)" >Eco31I:168</text>
+<line x1 ="-156.28799999999998" y1="50" x2="-156.28799999999998" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-156.28799999999998" y1="55" x2="-167.976" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-167.976" y1="60" x2="-167.976" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-150.88799999999998" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -150.88799999999998,50)" >BsmAI:169</text>
+<line x1 ="-150.88799999999998" y1="50" x2="-150.88799999999998" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-150.88799999999998" y1="55" x2="-167.904" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-167.904" y1="60" x2="-167.904" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-145.48799999999997" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -145.48799999999997,50)" >PcsI:221</text>
+<line x1 ="-145.48799999999997" y1="50" x2="-145.48799999999997" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-145.48799999999997" y1="55" x2="-164.16" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-164.16" y1="60" x2="-164.16" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-140.08799999999997" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -140.08799999999997,50)" >AgeI:348</text>
+<line x1 ="-140.08799999999997" y1="50" x2="-140.08799999999997" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-140.08799999999997" y1="55" x2="-155.016" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-155.016" y1="60" x2="-155.016" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-134.688" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -134.688,50)" >MaeI:398</text>
+<line x1 ="-134.688" y1="50" x2="-134.688" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-134.688" y1="55" x2="-151.416" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-151.416" y1="60" x2="-151.416" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-129.28799999999995" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -129.28799999999995,50)" >Eco57I:622</text>
+<line x1 ="-129.28799999999995" y1="50" x2="-129.28799999999995" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-129.28799999999995" y1="55" x2="-135.288" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-135.288" y1="60" x2="-135.288" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-123.88799999999996" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -123.88799999999996,50)" >FokI:673</text>
+<line x1 ="-123.88799999999996" y1="50" x2="-123.88799999999996" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-123.88799999999996" y1="55" x2="-131.61599999999999" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-131.61599999999999" y1="60" x2="-131.61599999999999" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-118.48799999999997" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -118.48799999999997,50)" >AsuII:691</text>
+<line x1 ="-118.48799999999997" y1="50" x2="-118.48799999999997" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-118.48799999999997" y1="55" x2="-130.32" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-130.32" y1="60" x2="-130.32" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-113.08799999999998" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -113.08799999999998,50)" >XmnI:694</text>
+<line x1 ="-113.08799999999998" y1="50" x2="-113.08799999999998" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-113.08799999999998" y1="55" x2="-130.10399999999998" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-130.10399999999998" y1="60" x2="-130.10399999999998" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-107.68799999999997" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -107.68799999999997,50)" >EcoRI:796</text>
+<line x1 ="-107.68799999999997" y1="50" x2="-107.68799999999997" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-107.68799999999997" y1="55" x2="-122.75999999999999" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-122.75999999999999" y1="60" x2="-122.75999999999999" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-102.28799999999997" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -102.28799999999997,50)" >ApoI:796</text>
+<line x1 ="-102.28799999999997" y1="50" x2="-102.28799999999997" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-102.28799999999997" y1="55" x2="-122.75999999999999" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-122.75999999999999" y1="60" x2="-122.75999999999999" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-96.88799999999998" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -96.88799999999998,50)" >FokI:871</text>
+<line x1 ="-96.88799999999998" y1="50" x2="-96.88799999999998" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-96.88799999999998" y1="55" x2="-117.36000000000001" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-117.36000000000001" y1="60" x2="-117.36000000000001" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-91.48799999999997" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -91.48799999999997,50)" >AflIII:948</text>
+<line x1 ="-91.48799999999997" y1="50" x2="-91.48799999999997" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-91.48799999999997" y1="55" x2="-111.816" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-111.816" y1="60" x2="-111.816" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-86.08799999999997" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -86.08799999999997,50)" >AvaI:1025</text>
+<line x1 ="-86.08799999999997" y1="50" x2="-86.08799999999997" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-86.08799999999997" y1="55" x2="-106.27199999999999" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-106.27199999999999" y1="60" x2="-106.27199999999999" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-80.68799999999996" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -80.68799999999996,50)" >OliI:1099</text>
+<line x1 ="-80.68799999999996" y1="50" x2="-80.68799999999996" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-80.68799999999996" y1="55" x2="-100.944" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-100.944" y1="60" x2="-100.944" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-75.28799999999997" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -75.28799999999997,50)" >MslI:1099</text>
+<line x1 ="-75.28799999999997" y1="50" x2="-75.28799999999997" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-75.28799999999997" y1="55" x2="-100.944" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-100.944" y1="60" x2="-100.944" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-69.88799999999998" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -69.88799999999998,50)" >EciI:1540</text>
+<line x1 ="-69.88799999999998" y1="50" x2="-69.88799999999998" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-69.88799999999998" y1="55" x2="-69.192" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-69.192" y1="60" x2="-69.192" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-64.48799999999997" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -64.48799999999997,50)" >MaeI:1616</text>
+<line x1 ="-64.48799999999997" y1="50" x2="-64.48799999999997" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-64.48799999999997" y1="55" x2="-63.72" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-63.72" y1="60" x2="-63.72" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-59.087999999999965" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -59.087999999999965,50)" >OliI:1631</text>
+<line x1 ="-59.087999999999965" y1="50" x2="-59.087999999999965" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-59.087999999999965" y1="55" x2="-62.64" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-62.64" y1="60" x2="-62.64" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-53.68799999999999" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -53.68799999999999,50)" >MslI:1631</text>
+<line x1 ="-53.68799999999999" y1="50" x2="-53.68799999999999" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-53.68799999999999" y1="55" x2="-62.64" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-62.64" y1="60" x2="-62.64" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-48.28799999999998" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -48.28799999999998,50)" >SfaNI:1679</text>
+<line x1 ="-48.28799999999998" y1="50" x2="-48.28799999999998" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-48.28799999999998" y1="55" x2="-59.184" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-59.184" y1="60" x2="-59.184" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-42.88799999999998" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -42.88799999999998,50)" >XmnI:1872</text>
+<line x1 ="-42.88799999999998" y1="50" x2="-42.88799999999998" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-42.88799999999998" y1="55" x2="-45.28800000000001" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-45.28800000000001" y1="60" x2="-45.28800000000001" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-28.72799999999998" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -28.72799999999998,50)" >Eco57I:2102</text>
+<line x1 ="-28.72799999999998" y1="50" x2="-28.72799999999998" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-28.72799999999998" y1="55" x2="-28.72799999999998" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-28.72799999999998" y1="60" x2="-28.72799999999998" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-22.132800000000003" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -22.132800000000003,50)" >EciI:2254</text>
+<line x1 ="-22.132800000000003" y1="50" x2="-22.132800000000003" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-22.132800000000003" y1="55" x2="-17.783999999999992" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-17.783999999999992" y1="60" x2="-17.783999999999992" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-16.732799999999997" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -16.732799999999997,50)" >AsuII:2275</text>
+<line x1 ="-16.732799999999997" y1="50" x2="-16.732799999999997" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-16.732799999999997" y1="55" x2="-16.27200000000002" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-16.27200000000002" y1="60" x2="-16.27200000000002" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-11.332799999999992" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -11.332799999999992,50)" >EcoRI:2392</text>
+<line x1 ="-11.332799999999992" y1="50" x2="-11.332799999999992" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-11.332799999999992" y1="55" x2="-7.847999999999985" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-7.847999999999985" y1="60" x2="-7.847999999999985" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-5.932799999999986" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -5.932799999999986,50)" >ApoI:2392</text>
+<line x1 ="-5.932799999999986" y1="50" x2="-5.932799999999986" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-5.932799999999986" y1="55" x2="-7.847999999999985" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-7.847999999999985" y1="60" x2="-7.847999999999985" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="-0.5327999999999804" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 -0.5327999999999804,50)" >PcsI:2405</text>
+<line x1 ="-0.5327999999999804" y1="50" x2="-0.5327999999999804" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-0.5327999999999804" y1="55" x2="-6.912000000000006" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="-6.912000000000006" y1="60" x2="-6.912000000000006" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="8.369999999999948" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 8.369999999999948,50)" >SgrAI:2697</text>
+<line x1 ="8.369999999999948" y1="50" x2="8.369999999999948" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="8.369999999999948" y1="55" x2="14.111999999999995" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="14.111999999999995" y1="60" x2="14.111999999999995" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="13.769999999999953" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 13.769999999999953,50)" >AgeI:2698</text>
+<line x1 ="13.769999999999953" y1="50" x2="13.769999999999953" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="13.769999999999953" y1="55" x2="14.183999999999997" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="14.183999999999997" y1="60" x2="14.183999999999997" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="19.16999999999996" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 19.16999999999996,50)" >AflIII:2754</text>
+<line x1 ="19.16999999999996" y1="50" x2="19.16999999999996" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="19.16999999999996" y1="55" x2="18.21599999999998" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="18.21599999999998" y1="60" x2="18.21599999999998" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="24.569999999999965" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 24.569999999999965,50)" >MmeI:2770</text>
+<line x1 ="24.569999999999965" y1="50" x2="24.569999999999965" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="24.569999999999965" y1="55" x2="19.367999999999995" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="19.367999999999995" y1="60" x2="19.367999999999995" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="38.664000000000016" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 38.664000000000016,50)" >SapI:3038</text>
+<line x1 ="38.664000000000016" y1="50" x2="38.664000000000016" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="38.664000000000016" y1="55" x2="38.664000000000016" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="38.664000000000016" y1="60" x2="38.664000000000016" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="51.98399999999998" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 51.98399999999998,50)" >SfaNI:3223</text>
+<line x1 ="51.98399999999998" y1="50" x2="51.98399999999998" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="51.98399999999998" y1="55" x2="51.98399999999998" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="51.98399999999998" y1="60" x2="51.98399999999998" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="60.40799999999999" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 60.40799999999999,50)" >PsrI:3374</text>
+<line x1 ="60.40799999999999" y1="50" x2="60.40799999999999" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="60.40799999999999" y1="55" x2="62.855999999999995" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="62.855999999999995" y1="60" x2="62.855999999999995" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="65.80799999999999" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 65.80799999999999,50)" >PsrI:3381</text>
+<line x1 ="65.80799999999999" y1="50" x2="65.80799999999999" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="65.80799999999999" y1="55" x2="63.360000000000014" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="63.360000000000014" y1="60" x2="63.360000000000014" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="75.0394285714286" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 75.0394285714286,50)" >BciVI:3644</text>
+<line x1 ="75.0394285714286" y1="50" x2="75.0394285714286" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="75.0394285714286" y1="55" x2="82.29599999999999" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="82.29599999999999" y1="60" x2="82.29599999999999" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="80.4394285714286" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 80.4394285714286,50)" >MmeI:3754</text>
+<line x1 ="80.4394285714286" y1="50" x2="80.4394285714286" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="80.4394285714286" y1="55" x2="90.21600000000001" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="90.21600000000001" y1="60" x2="90.21600000000001" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="85.83942857142864" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 85.83942857142864,50)" >EcoRI:3862</text>
+<line x1 ="85.83942857142864" y1="50" x2="85.83942857142864" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="85.83942857142864" y1="55" x2="97.99200000000002" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="97.99200000000002" y1="60" x2="97.99200000000002" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="91.23942857142862" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 91.23942857142862,50)" >ApoI:3862</text>
+<line x1 ="91.23942857142862" y1="50" x2="91.23942857142862" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="91.23942857142862" y1="55" x2="97.99200000000002" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="97.99200000000002" y1="60" x2="97.99200000000002" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="96.6394285714286" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 96.6394285714286,50)" >Eco57I:3886</text>
+<line x1 ="96.6394285714286" y1="50" x2="96.6394285714286" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="96.6394285714286" y1="55" x2="99.72000000000003" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="99.72000000000003" y1="60" x2="99.72000000000003" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="102.03942857142857" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 102.03942857142857,50)" >SgrAI:3915</text>
+<line x1 ="102.03942857142857" y1="50" x2="102.03942857142857" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="102.03942857142857" y1="55" x2="101.80799999999999" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="101.80799999999999" y1="60" x2="101.80799999999999" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="107.4394285714286" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 107.4394285714286,50)" >AgeI:3916</text>
+<line x1 ="107.4394285714286" y1="50" x2="107.4394285714286" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="107.4394285714286" y1="55" x2="101.88" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="101.88" y1="60" x2="101.88" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="112.83942857142858" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 112.83942857142858,50)" >SfaNI:4097</text>
+<line x1 ="112.83942857142858" y1="50" x2="112.83942857142858" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="112.83942857142858" y1="55" x2="114.91200000000003" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="114.91200000000003" y1="60" x2="114.91200000000003" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="118.23942857142862" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 118.23942857142862,50)" >FokI:4105</text>
+<line x1 ="118.23942857142862" y1="50" x2="118.23942857142862" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="118.23942857142862" y1="55" x2="115.488" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="115.488" y1="60" x2="115.488" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="123.6394285714286" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 123.6394285714286,50)" >XmnI:4126</text>
+<line x1 ="123.6394285714286" y1="50" x2="123.6394285714286" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="123.6394285714286" y1="55" x2="117" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="117" y1="60" x2="117" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="129.03942857142863" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 129.03942857142863,50)" >SapI:4207</text>
+<line x1 ="129.03942857142863" y1="50" x2="129.03942857142863" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="129.03942857142863" y1="55" x2="122.832" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="122.832" y1="60" x2="122.832" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="134.4394285714286" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 134.4394285714286,50)" >AvaI:4322</text>
+<line x1 ="134.4394285714286" y1="50" x2="134.4394285714286" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="134.4394285714286" y1="55" x2="131.11199999999997" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="131.11199999999997" y1="60" x2="131.11199999999997" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="139.83942857142864" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 139.83942857142864,50)" >OliI:4367</text>
+<line x1 ="139.83942857142864" y1="50" x2="139.83942857142864" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="139.83942857142864" y1="55" x2="134.35199999999998" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="134.35199999999998" y1="60" x2="134.35199999999998" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="145.23942857142862" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 145.23942857142862,50)" >MslI:4367</text>
+<line x1 ="145.23942857142862" y1="50" x2="145.23942857142862" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="145.23942857142862" y1="55" x2="134.35199999999998" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="134.35199999999998" y1="60" x2="134.35199999999998" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="152.20799999999997" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 152.20799999999997,50)" >BsmAI:4615</text>
+<line x1 ="152.20799999999997" y1="50" x2="152.20799999999997" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="152.20799999999997" y1="55" x2="152.20799999999997" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="152.20799999999997" y1="60" x2="152.20799999999997" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="171.312" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 171.312,50)" >MmeI:4918</text>
+<line x1 ="171.312" y1="50" x2="171.312" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="171.312" y1="55" x2="174.024" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="174.024" y1="60" x2="174.024" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="176.71200000000005" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 176.71200000000005,50)" >BplI:4974</text>
+<line x1 ="176.71200000000005" y1="50" x2="176.71200000000005" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="176.71200000000005" y1="55" x2="178.05600000000004" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="178.05600000000004" y1="60" x2="178.05600000000004" y2="70" stroke="black" stroke-width="0.1" ></line>
+<text x="182.11200000000002" y="50" font-size="3" text-anchor="end" dominant-baseline="central" transform="rotate(90 182.11200000000002,50)" >BplI:4974</text>
+<line x1 ="182.11200000000002" y1="50" x2="182.11200000000002" y2="55" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="182.11200000000002" y1="55" x2="178.05600000000004" y2="60" stroke="black" stroke-width="0.1" ></line>
+<line x1 ="178.05600000000004" y1="60" x2="178.05600000000004" y2="70" stroke="black" stroke-width="0.1" ></line>
+<rect x ="-178.2" y="68" width="52.19999999999999" height="4" fill="#ffffff" stroke="black" stroke-width="0.2" ></rect>
+<text x="-152.1" y="70" font-size="4" text-anchor="middle" dominant-baseline="central" >region1</text>
+<rect x ="-122.4" y="68" width="14.400000000000006" height="4" fill="green" stroke="black" stroke-width="0.2" ></rect>
+<text x="-115.2" y="70" font-size="4" text-anchor="middle" dominant-baseline="central" >region2</text>
+<rect x ="-93.6" y="68" width="36" height="4" fill="red" stroke="black" stroke-width="0.2" ></rect>
+<text x="-75.6" y="70" font-size="4" text-anchor="middle" dominant-baseline="central" >region3 1</text>
+<rect x ="-86.4" y="72" width="21.60000000000001" height="4" fill="blue" stroke="black" stroke-width="0.2" ></rect>
+<text x="-75.6" y="74" font-size="4" text-anchor="middle" dominant-baseline="central" >region3 2</text>
+<rect x ="-79.2" y="64" width="43.2" height="4" fill="white" stroke="black" stroke-width="0.2" ></rect>
+<text x="-57.6" y="66" font-size="4" text-anchor="middle" dominant-baseline="central" >region3 3</text>
+<rect x ="0" y="68" width="36" height="4" fill="cyan" stroke="black" stroke-width="0.2" ></rect>
+<text x="18" y="70" font-size="4" text-anchor="middle" dominant-baseline="central" >region4</text>
+<rect x ="86.39999999999998" y="68" width="57.60000000000002" height="4" fill="#ffccbd" stroke="black" stroke-width="0.2" ></rect>
+<text x="115.19999999999999" y="70" font-size="4" text-anchor="middle" dominant-baseline="central" >region5</text>
+<text x="0" y="115" font-size="5" text-anchor="middle" >Enzyme that do cut</text>
+<text x="-180" y="120" font-size="4" text-anchor="left" >AccI</text>
+<text x="-150" y="120" font-size="4" text-anchor="left" >AciI</text>
+<text x="-120" y="120" font-size="4" text-anchor="left" >AcyI</text>
+<text x="-90" y="120" font-size="4" text-anchor="left" >AflII</text>
+<text x="-60" y="120" font-size="4" text-anchor="left" >AflIII</text>
+<text x="-30" y="120" font-size="4" text-anchor="left" >AgeI</text>
+<text x="0" y="120" font-size="4" text-anchor="left" >AgsI</text>
+<text x="30" y="120" font-size="4" text-anchor="left" >AluI</text>
+<text x="60" y="120" font-size="4" text-anchor="left" >AoxI</text>
+<text x="90" y="120" font-size="4" text-anchor="left" >ApoI</text>
+<text x="120" y="120" font-size="4" text-anchor="left" >AsuII</text>
+<text x="150" y="120" font-size="4" text-anchor="left" >AvaI</text>
+<text x="-180" y="125" font-size="4" text-anchor="left" >AvrII</text>
+<text x="-150" y="125" font-size="4" text-anchor="left" >BamHI</text>
+<text x="-120" y="125" font-size="4" text-anchor="left" >BbvI</text>
+<text x="-90" y="125" font-size="4" text-anchor="left" >BccI</text>
+<text x="-60" y="125" font-size="4" text-anchor="left" >BciVI</text>
+<text x="-30" y="125" font-size="4" text-anchor="left" >BclI</text>
+<text x="0" y="125" font-size="4" text-anchor="left" >BplI</text>
+<text x="30" y="125" font-size="4" text-anchor="left" >BsaBI</text>
+<text x="60" y="125" font-size="4" text-anchor="left" >BsaXI</text>
+<text x="90" y="125" font-size="4" text-anchor="left" >BseMII</text>
+<text x="120" y="125" font-size="4" text-anchor="left" >BsePI</text>
+<text x="150" y="125" font-size="4" text-anchor="left" >BseSI</text>
+<text x="-180" y="130" font-size="4" text-anchor="left" >BseYI</text>
+<text x="-150" y="130" font-size="4" text-anchor="left" >BsgI</text>
+<text x="-120" y="130" font-size="4" text-anchor="left" >BsmAI</text>
+<text x="-90" y="130" font-size="4" text-anchor="left" >BspMI</text>
+<text x="-60" y="130" font-size="4" text-anchor="left" >BsrI</text>
+<text x="-30" y="130" font-size="4" text-anchor="left" >BsrBI</text>
+<text x="0" y="130" font-size="4" text-anchor="left" >BstEII</text>
+<text x="30" y="130" font-size="4" text-anchor="left" >BtgZI</text>
+<text x="60" y="130" font-size="4" text-anchor="left" >BtrI</text>
+<text x="90" y="130" font-size="4" text-anchor="left" >Cac8I</text>
+<text x="120" y="130" font-size="4" text-anchor="left" >Cfr10I</text>
+<text x="150" y="130" font-size="4" text-anchor="left" >CviJI</text>
+<text x="-180" y="135" font-size="4" text-anchor="left" >DdeI</text>
+<text x="-150" y="135" font-size="4" text-anchor="left" >DpnI</text>
+<text x="-120" y="135" font-size="4" text-anchor="left" >EciI</text>
+<text x="-90" y="135" font-size="4" text-anchor="left" >Eco31I</text>
+<text x="-60" y="135" font-size="4" text-anchor="left" >Eco47III</text>
+<text x="-30" y="135" font-size="4" text-anchor="left" >Eco57I</text>
+<text x="0" y="135" font-size="4" text-anchor="left" >EcoRI</text>
+<text x="30" y="135" font-size="4" text-anchor="left" >EcoRII</text>
+<text x="60" y="135" font-size="4" text-anchor="left" >EcoRV</text>
+<text x="90" y="135" font-size="4" text-anchor="left" >Esp3I</text>
+<text x="120" y="135" font-size="4" text-anchor="left" >FaiI</text>
+<text x="150" y="135" font-size="4" text-anchor="left" >FalI</text>
+<text x="-180" y="140" font-size="4" text-anchor="left" >FauI</text>
+<text x="-150" y="140" font-size="4" text-anchor="left" >BisI</text>
+<text x="-120" y="140" font-size="4" text-anchor="left" >Fnu4HI</text>
+<text x="-90" y="140" font-size="4" text-anchor="left" >FokI</text>
+<text x="-60" y="140" font-size="4" text-anchor="left" >FspEI</text>
+<text x="-30" y="140" font-size="4" text-anchor="left" >GlaI</text>
+<text x="0" y="140" font-size="4" text-anchor="left" >HaeII</text>
+<text x="30" y="140" font-size="4" text-anchor="left" >HaeIII</text>
+<text x="60" y="140" font-size="4" text-anchor="left" >HgaI</text>
+<text x="90" y="140" font-size="4" text-anchor="left" >HhaI</text>
+<text x="120" y="140" font-size="4" text-anchor="left" >HindII</text>
+<text x="150" y="140" font-size="4" text-anchor="left" >HindIII</text>
+<text x="-180" y="145" font-size="4" text-anchor="left" >HpaI</text>
+<text x="-150" y="145" font-size="4" text-anchor="left" >HpaII</text>
+<text x="-120" y="145" font-size="4" text-anchor="left" >HphI</text>
+<text x="-90" y="145" font-size="4" text-anchor="left" >Hpy99I</text>
+<text x="-60" y="145" font-size="4" text-anchor="left" >Hpy188I</text>
+<text x="-30" y="145" font-size="4" text-anchor="left" >LmnI</text>
+<text x="0" y="145" font-size="4" text-anchor="left" >LpnPI</text>
+<text x="30" y="145" font-size="4" text-anchor="left" >MaeI</text>
+<text x="60" y="145" font-size="4" text-anchor="left" >MaeII</text>
+<text x="90" y="145" font-size="4" text-anchor="left" >MaeIII</text>
+<text x="120" y="145" font-size="4" text-anchor="left" >MboI</text>
+<text x="150" y="145" font-size="4" text-anchor="left" >MboII</text>
+<text x="-180" y="150" font-size="4" text-anchor="left" >MmeI</text>
+<text x="-150" y="150" font-size="4" text-anchor="left" >MnlI</text>
+<text x="-120" y="150" font-size="4" text-anchor="left" >MseI</text>
+<text x="-90" y="150" font-size="4" text-anchor="left" >MslI</text>
+<text x="-60" y="150" font-size="4" text-anchor="left" >MspJI</text>
+<text x="-30" y="150" font-size="4" text-anchor="left" >MwoI</text>
+<text x="0" y="150" font-size="4" text-anchor="left" >NlaIII</text>
+<text x="30" y="150" font-size="4" text-anchor="left" >NlaIV</text>
+<text x="60" y="150" font-size="4" text-anchor="left" >NmeAIII</text>
+<text x="90" y="150" font-size="4" text-anchor="left" >NspI</text>
+<text x="120" y="150" font-size="4" text-anchor="left" >OliI</text>
+<text x="150" y="150" font-size="4" text-anchor="left" >PcsI</text>
+<text x="-180" y="155" font-size="4" text-anchor="left" >PsiI</text>
+<text x="-150" y="155" font-size="4" text-anchor="left" >PsrI</text>
+<text x="-120" y="155" font-size="4" text-anchor="left" >PvuII</text>
+<text x="-90" y="155" font-size="4" text-anchor="left" >RsaI</text>
+<text x="-60" y="155" font-size="4" text-anchor="left" >SacII</text>
+<text x="-30" y="155" font-size="4" text-anchor="left" >SapI</text>
+<text x="0" y="155" font-size="4" text-anchor="left" >ScrFI</text>
+<text x="30" y="155" font-size="4" text-anchor="left" >SduI</text>
+<text x="60" y="155" font-size="4" text-anchor="left" >SetI</text>
+<text x="90" y="155" font-size="4" text-anchor="left" >SfaNI</text>
+<text x="120" y="155" font-size="4" text-anchor="left" >SgeI</text>
+<text x="150" y="155" font-size="4" text-anchor="left" >SgrAI</text>
+<text x="-180" y="160" font-size="4" text-anchor="left" >SmlI</text>
+<text x="-150" y="160" font-size="4" text-anchor="left" >StuI</text>
+<text x="-120" y="160" font-size="4" text-anchor="left" >StyI</text>
+<text x="-90" y="160" font-size="4" text-anchor="left" >TaqI</text>
+<text x="-60" y="160" font-size="4" text-anchor="left" >TaqII</text>
+<text x="-30" y="160" font-size="4" text-anchor="left" >TauI</text>
+<text x="0" y="160" font-size="4" text-anchor="left" >TseI</text>
+<text x="30" y="160" font-size="4" text-anchor="left" >Tsp45I</text>
+<text x="60" y="160" font-size="4" text-anchor="left" >TspDTI</text>
+<text x="90" y="160" font-size="4" text-anchor="left" >TspGWI</text>
+<text x="120" y="160" font-size="4" text-anchor="left" >XmnI</text>
+<text x="0" y="170" font-size="5" text-anchor="middle" >Enzyme that do NOT cut</text>
+<text x="-180" y="175" font-size="4" text-anchor="left" >AarI</text>
+<text x="-150" y="175" font-size="4" text-anchor="left" >AatII</text>
+<text x="-120" y="175" font-size="4" text-anchor="left" >AbsI</text>
+<text x="-90" y="175" font-size="4" text-anchor="left" >AclI</text>
+<text x="-60" y="175" font-size="4" text-anchor="left" >AjuI</text>
+<text x="-30" y="175" font-size="4" text-anchor="left" >AloI</text>
+<text x="0" y="175" font-size="4" text-anchor="left" >AlwNI</text>
+<text x="30" y="175" font-size="4" text-anchor="left" >ApaI</text>
+<text x="60" y="175" font-size="4" text-anchor="left" >ApaLI</text>
+<text x="90" y="175" font-size="4" text-anchor="left" >ArsI</text>
+<text x="120" y="175" font-size="4" text-anchor="left" >AscI</text>
+<text x="150" y="175" font-size="4" text-anchor="left" >AvaII</text>
+<text x="-180" y="180" font-size="4" text-anchor="left" >BaeI</text>
+<text x="-150" y="180" font-size="4" text-anchor="left" >BalI</text>
+<text x="-120" y="180" font-size="4" text-anchor="left" >BarI</text>
+<text x="-90" y="180" font-size="4" text-anchor="left" >BbvCI</text>
+<text x="-60" y="180" font-size="4" text-anchor="left" >BcgI</text>
+<text x="-30" y="180" font-size="4" text-anchor="left" >BglI</text>
+<text x="0" y="180" font-size="4" text-anchor="left" >BglII</text>
+<text x="30" y="180" font-size="4" text-anchor="left" >Bpu10I</text>
+<text x="60" y="180" font-size="4" text-anchor="left" >BsaAI</text>
+<text x="90" y="180" font-size="4" text-anchor="left" >BseRI</text>
+<text x="120" y="180" font-size="4" text-anchor="left" >BsmI</text>
+<text x="150" y="180" font-size="4" text-anchor="left" >Bsp1407I</text>
+<text x="-180" y="185" font-size="4" text-anchor="left" >BspHI</text>
+<text x="-150" y="185" font-size="4" text-anchor="left" >BsrDI</text>
+<text x="-120" y="185" font-size="4" text-anchor="left" >BstXI</text>
+<text x="-90" y="185" font-size="4" text-anchor="left" >BtsI</text>
+<text x="-60" y="185" font-size="4" text-anchor="left" >BtsIMutI</text>
+<text x="-30" y="185" font-size="4" text-anchor="left" >ClaI</text>
+<text x="0" y="185" font-size="4" text-anchor="left" >CspCI</text>
+<text x="30" y="185" font-size="4" text-anchor="left" >DraIII</text>
+<text x="60" y="185" font-size="4" text-anchor="left" >DrdI</text>
+<text x="90" y="185" font-size="4" text-anchor="left" >Eam1105I</text>
+<text x="120" y="185" font-size="4" text-anchor="left" >EcoNI</text>
+<text x="150" y="185" font-size="4" text-anchor="left" >FseI</text>
+<text x="-180" y="190" font-size="4" text-anchor="left" >FspAI</text>
+<text x="-150" y="190" font-size="4" text-anchor="left" >GsuI</text>
+<text x="-120" y="190" font-size="4" text-anchor="left" >HinfI</text>
+<text x="-90" y="190" font-size="4" text-anchor="left" >KpnI</text>
+<text x="-60" y="190" font-size="4" text-anchor="left" >KroI</text>
+<text x="-30" y="190" font-size="4" text-anchor="left" >MauBI</text>
+<text x="0" y="190" font-size="4" text-anchor="left" >MfeI</text>
+<text x="30" y="190" font-size="4" text-anchor="left" >MluI</text>
+<text x="60" y="190" font-size="4" text-anchor="left" >MteI</text>
+<text x="90" y="190" font-size="4" text-anchor="left" >NaeI</text>
+<text x="120" y="190" font-size="4" text-anchor="left" >NarI</text>
+<text x="150" y="190" font-size="4" text-anchor="left" >NcoI</text>
+<text x="-180" y="195" font-size="4" text-anchor="left" >NdeI</text>
+<text x="-150" y="195" font-size="4" text-anchor="left" >NheI</text>
+<text x="-120" y="195" font-size="4" text-anchor="left" >NotI</text>
+<text x="-90" y="195" font-size="4" text-anchor="left" >NruI</text>
+<text x="-60" y="195" font-size="4" text-anchor="left" >PacI</text>
+<text x="-30" y="195" font-size="4" text-anchor="left" >PasI</text>
+<text x="0" y="195" font-size="4" text-anchor="left" >PflMI</text>
+<text x="30" y="195" font-size="4" text-anchor="left" >PfoI</text>
+<text x="60" y="195" font-size="4" text-anchor="left" >PleI</text>
+<text x="90" y="195" font-size="4" text-anchor="left" >PmaCI</text>
+<text x="120" y="195" font-size="4" text-anchor="left" >PmeI</text>
+<text x="150" y="195" font-size="4" text-anchor="left" >PpuMI</text>
+<text x="-180" y="200" font-size="4" text-anchor="left" >PshAI</text>
+<text x="-150" y="200" font-size="4" text-anchor="left" >PspXI</text>
+<text x="-120" y="200" font-size="4" text-anchor="left" >PstI</text>
+<text x="-90" y="200" font-size="4" text-anchor="left" >PvuI</text>
+<text x="-60" y="200" font-size="4" text-anchor="left" >RsrII</text>
+<text x="-30" y="200" font-size="4" text-anchor="left" >SacI</text>
+<text x="0" y="200" font-size="4" text-anchor="left" >SalI</text>
+<text x="30" y="200" font-size="4" text-anchor="left" >ScaI</text>
+<text x="60" y="200" font-size="4" text-anchor="left" >SexAI</text>
+<text x="90" y="200" font-size="4" text-anchor="left" >SfiI</text>
+<text x="120" y="200" font-size="4" text-anchor="left" >SgfI</text>
+<text x="150" y="200" font-size="4" text-anchor="left" >SgrDI</text>
+<text x="-180" y="205" font-size="4" text-anchor="left" >SmaI</text>
+<text x="-150" y="205" font-size="4" text-anchor="left" >SnaBI</text>
+<text x="-120" y="205" font-size="4" text-anchor="left" >SpeI</text>
+<text x="-90" y="205" font-size="4" text-anchor="left" >SphI</text>
+<text x="-60" y="205" font-size="4" text-anchor="left" >SrfI</text>
+<text x="-30" y="205" font-size="4" text-anchor="left" >Sse8387I</text>
+<text x="0" y="205" font-size="4" text-anchor="left" >SspI</text>
+<text x="30" y="205" font-size="4" text-anchor="left" >SwaI</text>
+<text x="60" y="205" font-size="4" text-anchor="left" >TatI</text>
+<text x="90" y="205" font-size="4" text-anchor="left" >TfiI</text>
+<text x="120" y="205" font-size="4" text-anchor="left" >TspRI</text>
+<text x="150" y="205" font-size="4" text-anchor="left" >Tth111I</text>
+<text x="-180" y="210" font-size="4" text-anchor="left" >VspI</text>
+<text x="-150" y="210" font-size="4" text-anchor="left" >XbaI</text>
+<text x="-120" y="210" font-size="4" text-anchor="left" >XcmI</text>
+<text x="-90" y="210" font-size="4" text-anchor="left" >XhoI</text>
+</svg>
