@@ -8,7 +8,7 @@ function onLoad() {
 }
 
 function onResize() {
-    const size = Math.min(window.innerHeight, window.innerWidth / 2) * 0.9;
+    const size = window.innerWidth * 0.3;
     svg.setAttribute("width", (size * 2) + "px");
     svg.setAttribute("height", size + "px");
 }
@@ -130,18 +130,18 @@ function drawMap() {
         svg.setAttribute("viewBox", "-200 0 400 200");
         svgtext += SVG.text(nucleicAcid.name, 0, 10, { "font-size": "8", "text-anchor": "middle" });
         svgtext += SVG.text("" + nucleicAcid.sequence.length + "Bp", 0, 20, { "font-size": "7", "text-anchor": "middle" });
-        svgtext += SVG.line(-180, 70, 180, 70, { "stroke": "black", "stroke-width": "2" });
+        svgtext += SVG.line(-180, 65, 180, 65, { "stroke": "black", "stroke-width": "2" });
 
         for (data of innerRing.data) {
             let x = -180 + 360 * data.place2;
-            let y = 90;
+            let y = 82;
 
             let x1 = -180 + 360 * data.place2;
-            let y1 = 85;
+            let y1 = 80;
             let x2 = -180 + 360 * data.place1;
-            let y2 = 80;
+            let y2 = 75;
             let x3 = -180 + 360 * data.place1;
-            let y3 = 70;
+            let y3 = 65;
 
             svgtext += SVG.text(data.name + ":" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "3", "text-anchor": "end", "dominant-baseline": "central", "transform": "rotate(270 " + x + "," + y + ")" });
             svgtext += SVG.line(x, y, x1, y1, { "stroke": "black", "stroke-width": "0.1" });
@@ -150,14 +150,14 @@ function drawMap() {
         }
         for (data of outerRing.data) {
             let x = -180 + 360 * data.place2;
-            let y = 50;
+            let y = 48;
 
             let x1 = -180 + 360 * data.place2;
-            let y1 = 55;
+            let y1 = 50;
             let x2 = -180 + 360 * data.place1;
-            let y2 = 60;
+            let y2 = 55;
             let x3 = -180 + 360 * data.place1;
-            let y3 = 70;
+            let y3 = 65;
 
             if (key_flag[data.name] == 2) {
                 svgtext += SVG.text(data.name + ":" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "3", "text-anchor": "end", "dominant-baseline": "central", "transform": "rotate(90 " + x + "," + y + ")" });
@@ -174,28 +174,28 @@ function drawMap() {
             let x1 = -180 + 360 * region.s / len;
             let x2 = -180 + 360 * region.e / len;
             let x = (x1 + x2) * 0.50;
-            svgtext += SVG.rect(x1, 68 + region.offset * 4, x2 - x1, 4, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
-            svgtext += SVG.text(region.name, x, 70 + region.offset * 4, { "font-size": "4", "text-anchor": "middle", "dominant-baseline": "central" });
+            svgtext += SVG.rect(x1, 63 + region.offset * 4, x2 - x1, 4, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
+            svgtext += SVG.text(region.name, x, 65 + region.offset * 4, { "font-size": "4", "text-anchor": "middle", "dominant-baseline": "central" });
         }
 
         let counting = 0;
-        svgtext += SVG.text("Enzyme that do cut", 0, 115 + Math.floor(counting / 12) * 5, { "font-size": "5", "text-anchor": "middle" });
-        counting += 12;
+        svgtext += SVG.text("Enzyme that do cut", 0, 110 + Math.floor(counting / 13) * 5, { "font-size": "5", "text-anchor": "middle" });
+        counting += 13;
         for (let i = keys.length - 1; i >= 0; i--) {
             let key = keys[i];
             if (result[key].length > 0) {
-                svgtext += SVG.text(key, -180 + 30 * (counting % 12), 115 + Math.floor(counting / 12) * 5, { "font-size": "4", "text-anchor": "left" });
+                svgtext += SVG.text(key, -200 + 30 * (counting % 13), 110 + Math.floor(counting / 13) * 5, { "font-size": "4", "text-anchor": "left" });
                 counting++;
             }
         }
-        counting += 24;
-        counting -= counting % 12;
-        svgtext += SVG.text("Enzyme that do NOT cut", 0, 115 + Math.floor(counting / 12) * 5, { "font-size": "5", "text-anchor": "middle" });
-        counting += 12;
+        counting += 26;
+        counting -= counting % 13;
+        svgtext += SVG.text("Enzyme that do NOT cut", 0, 110 + Math.floor(counting / 13) * 5, { "font-size": "5", "text-anchor": "middle" });
+        counting += 13;
         for (let i = keys.length - 1; i >= 0; i--) {
             let key = keys[i];
             if (result[key].length == 0) {
-                svgtext += SVG.text(key, -180 + 30 * (counting % 12), 115 + Math.floor(counting / 12) * 5, { "font-size": "4", "text-anchor": "left" });
+                svgtext += SVG.text(key, -200 + 30 * (counting % 13), 110 + Math.floor(counting / 13) * 5, { "font-size": "4", "text-anchor": "left" });
                 counting++;
             }
         }
@@ -246,6 +246,19 @@ function onTextLoaded() {
             ManyMatch.innerHTML += "<option value=\"" + key + "\">" + key + "</option>";
         }
     }
+
+    const regionOptions = document.getElementById("regionOptions_div");
+    let text = "";
+    for (let i = 0; i < nucleicAcid.region.length; i++) {
+        region = nucleicAcid.region[i];
+        text += "<details>\n";
+        text += "<summary>" + region.name + "(" + region.s + " to " + region.e + ")" + "</summary>\n"
+        text += "<p>color:<input type=\"color\" value=\"" + region.color + "\" onchange=\"onRegionDataChanged(0,this," + i + ")\"/></p>";
+        text += "<p>offset:<input type=\"number\" value=\"0\" step=\"0.5\" onchange=\"onRegionDataChanged(1,this," + i + ")\"/></p>";
+        text += "</details>\n";
+    }
+    regionOptions.innerHTML = text;
+
     enzymeChanged();
     drawMap();
 }
@@ -292,6 +305,16 @@ function enzymeOptionClicked(data) {
     else {
         let select = document.getElementById("EnzymeSelect");
         key_flag[select.options[select.selectedIndex].value] = data;
+    }
+    drawMap();
+}
+
+function onRegionDataChanged(type, element, idx) {
+    if (type == 0) {
+        nucleicAcid.region[idx].color = element.value;
+    }
+    else if (type == 1) {
+        nucleicAcid.region[idx].offset = parseFloat(element.value);
     }
     drawMap();
 }

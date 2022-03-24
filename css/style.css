@@ -8,7 +8,7 @@ div[id="editNav"] {
     position: absolute;
     left: 0px;
     top: 0px;
-    right: 0px;
+    width: 60%;
     bottom: 0px;
     display: none;
 }
@@ -16,158 +16,108 @@ div[id="editNav"] {
     div[id="editNav"] textarea {
         position: absolute;
         left: 0px;
-        top: 50px;
+        top: 30px;
         right: 0px;
         bottom: 0px;
     }
 
-    div[id="editNav"] label {
+    div[id="editNav"] div {
         position: absolute;
         top: 0px;
         left: 10px;
-        width: 300px;
-        height: 50px;
     }
 
-        div[id="editNav"] label div {
-            background: #00ffff;
-            border-bottom: solid 3px #00eeee;
-            user-select: none;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            margin-left: 20px;
-            width: 150px;
-            height: 30px;
-            border-radius: 8px;
-            text-align: center;
-        }
+p{
+    margin: 5px;
+}
 
-            div[id="editNav"] label div:active {
-                transform: translateY(3px);
-                border-bottom: solid 3px #f4faff;
-            }
-
-        div[id="editNav"] label input {
-            display: none;
-        }
-
-
+.buttondiv {
+    background: #f59e35;
+    height: 30px;
+    width: 150px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 30px;
+    border-radius: 5px;
+    user-select: none;
+    cursor: pointer;
+}
 
 div[id="control"] {
     position: absolute;
     top: 0%;
-    right: 2%;
+    right: 0%;
+    width: 40%;
+    height: 100%;
+    overflow: auto;
 }
 
-div.menu {
-    padding-bottom: 5px;
-    border-radius: 5px;
-    height: auto;
-    width: 100%;
-}
-
-    div.menu[id="selectFile"] {
-        background-color: #f4faff;
-    }
-
-        div.menu[id="selectFile"] p:first-child {
-            border-left: solid 5px #58afff;
-        }
-
-        div.menu[id="selectFile"] label div {
-            background: #00ffff;
-            border-bottom: solid 3px #00eeee;
-            user-select: none;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            margin-left: 20px;
-            width: 150px;
-            height: 30px;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-            div.menu[id="selectFile"] label div:active {
-                transform: translateY(3px);
-                border-bottom: solid 3px #f4faff;
-            }
-
-        div.menu[id="selectFile"] label input {
-            display: none;
-        }
-
-    div.menu[id="selectEnzyme"] {
-        background-color: #fffaf4;
-    }
-
-        div.menu[id="selectEnzyme"] p:first-child {
-            border-left: solid 5px #ffaf58;
-        }
-
-        div.menu[id="selectEnzyme"] input[type="radio"] {
-            display: none;
-        }
-
-        div.menu[id="selectEnzyme"] label input + div {
-            background-color: #ffffa0;
-            float: left;
-            width: 23%;
-            height: auto;
-            border-radius: 5px;
-            border: solid 2px #fffa94;
-        }
-
-        div.menu[id="selectEnzyme"] label input:checked + div {
-            border: solid 2px #ffaf50;
-        }
-
-        div.menu[id="selectEnzyme"] div.radios {
-            margin-left: 20px;
-            width: 100%;
-            height: 40px;
-        }
-
-    div.menu[id="saveImage"] {
-        background-color: #e2ffe2;
-    }
-
-        div.menu[id="saveImage"] p:first-child {
-            border-left: solid 5px #58ffaf;
-        }
-
-    div.menu[id="controlShow"] {
-        background-color: #ffefef;
-    }
-
-        div.menu[id="controlShow"] p:first-child {
-            border-left: solid 5px #ffafaf;
-        }
-
-    div.menu p {
-        margin: 10px 20px 10px 20px;
-    }
-
-        div.menu p:first-child {
-            font-size: 1.5rem;
-            font-weight: 800;
-            margin-left: 10px;
-            margin-bottom: 0px;
-        }
-
-input[id="controlShowInput"] {
+.menu-input {
     display: none;
 }
 
-    input[id="controlShowInput"]:checked ~ label div {
-        transition-duration: 1s;
-        opacity: 0;
+    .menu-input + label {
+        background: #08befa;
+        display: block;
+        font-size: 20px;
+        line-height: 45px;
+        position: relative;
     }
 
-        input[id="controlShowInput"]:checked ~ label div:hover {
-            transition-duration: 0s;
-            opacity: 1;
+        .menu-input + label::after {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            height: 100%;
+            aspect-ratio: 1 / 1;
+            content: "+";
+            text-align: center;
+            font-size: 20px;
+            line-height: 45px;
+            background: #0e13fc;
+            color: #fff;
         }
 
-    input[id="controlShowInput"]:checked ~ div {
-        display: none;
+
+        .menu-input + label + div {
+            border: 1px solid #0e13fc;
+            overflow: hidden;
+            margin-bottom: 10px;
+            padding: 5px;
+            transition-duration: 500ms;
+            max-height: 0;
+            opacity: 0;
+        }
+
+    .menu-input:checked + label::after {
+        content: "-";
     }
+
+    .menu-input:checked + label + div {
+        max-height: 100vh;
+        opacity: 1;
+    }
+
+
+div.enzymeOptions input[type="radio"] {
+    display: none;
+}
+
+div.enzymeOptions label input + div {
+    background-color: #ffffa0;
+    float: left;
+    width: 23%;
+    height: auto;
+    border-radius: 5px;
+    border: solid 2px #fffa94;
+}
+
+div.enzymeOptions label input:checked + div {
+    border: solid 2px #ffaf50;
+}
+
+div.regionOptions p{
+    height: 40px;
+    line-height: 40px;
+    vertical-align: baseline;
+}

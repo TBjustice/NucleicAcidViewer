@@ -12,28 +12,26 @@
     <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 400 200" oncontextmenu="onSwitchSvg2Text(event)"></svg>
     <div id="editNav">
         <textarea id="editNavText"></textarea>
-        <label>
-            <div><b>Start Mapping</b></div>
-            <input type="button" value="Start Mapping" onClick="onTextEditDone()" />
-        </label>
+        <div class="buttondiv" onclick="onTextEditDone()"><b>Start Mapping</b></div>
     </div>
     <div id="control">
-        <input type="checkbox" id="controlShowInput" />
-        <label for="controlShowInput">
-            <div class="menu" id="controlShow"><p class="show_or_not">Click to Show/Hide Controls</p></div>
-        </label>
-
-        <div class="menu" id="selectFile">
-            <p>Select Files</p>
-            <p>Select Rebase File ----- <input type="file" id="rebaseFile" size="50"></p>
-            <p>Select Sequence File -- <input type="file" id="sequenceFile" size="50"></p>
-            <label>
-                <div><b>Start Mapping</b></div>
-                <input type="button" value="Start Mapping" onClick="filesSelected()" />
-            </label>
+        <input type="checkbox" id="selectFile" class="menu-input" checked />
+        <label for="selectFile">Select Files</label>
+        <div class="selectFile">
+            <p>Rebase File:<input type="file" id="rebaseFile" /></p>
+            <p>Sequence File:<input type="file" id="sequenceFile" /></p>
+            <div class="buttondiv" onclick="filesSelected()"><b>Start Mapping</b></div>
         </div>
-        <div class="menu" id="selectEnzyme">
-            <p>Enzyme Options</p>
+
+        <input type="checkbox" id="regionOptions" class="menu-input" />
+        <label for="regionOptions">Region Options</label>
+        <div class="regionOptions" id="regionOptions_div">
+            NODATA
+        </div>
+
+        <input type="checkbox" id="enzymeOptions" class="menu-input" />
+        <label for="enzymeOptions">Enzyme Options</label>
+        <div class="enzymeOptions">
             <p>
                 Select Enzyme
                 <select name="Enzyme" onchange="enzymeChanged()" id="EnzymeSelect">
@@ -44,7 +42,9 @@
                     <optgroup label="more matches" id="manyMatch">
                     </optgroup>
                 </select>
-                Hide Except all
+            </p>
+            <p>
+                Hide Except all?
                 <input type="checkbox" id="exceptCheck" value="Except" />
             </p>
             <div class="radios">
@@ -67,8 +67,9 @@
             </div>
         </div>
 
-        <div class="menu" id="saveImage">
-            <p>Save Image</p>
+        <input type="checkbox" id="saveImage" class="menu-input" />
+        <label for="saveImage">Save Image</label>
+        <div class="saveImage">
             <p><a id="save1">Download nav file</a></p>
             <p><a id="save2">Download Image</a></p>
         </div>
