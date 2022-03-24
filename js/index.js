@@ -95,8 +95,8 @@ function drawMap() {
         }
 
         for (region of nucleicAcid.region) {
-            svgtext += SVG.arcBand(0, 0, 58 + region.offset * 4, 62 + region.offset * 4, (region.s / len - 0.25) * Math.PI * 2, (region.e / len - 0.25) * Math.PI * 2, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
-            svgtext += SVG.arcText(region.name, 0, 0, 60 + region.offset * 4, (region.s / len - 0.25) * Math.PI * 2, (region.e / len - 0.25) * Math.PI * 2, 4);
+            svgtext += SVG.arcBand(0, 0, 58 + region.offset * 5, 63 + region.offset * 5, (region.s / len - 0.25) * Math.PI * 2, (region.e / len - 0.25) * Math.PI * 2, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
+            svgtext += SVG.arcText(region.name, 0, 0, 60 + region.offset * 5, (region.s / len - 0.25) * Math.PI * 2, (region.e / len - 0.25) * Math.PI * 2, 4);
         }
 
         let counting = 0;
@@ -174,8 +174,8 @@ function drawMap() {
             let x1 = -180 + 360 * region.s / len;
             let x2 = -180 + 360 * region.e / len;
             let x = (x1 + x2) * 0.50;
-            svgtext += SVG.rect(x1, 63 + region.offset * 4, x2 - x1, 4, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
-            svgtext += SVG.text(region.name, x, 65 + region.offset * 4, { "font-size": "4", "text-anchor": "middle", "dominant-baseline": "central" });
+            svgtext += SVG.rect(x1, 62 + region.offset * 5, x2 - x1, 5, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
+            svgtext += SVG.text(region.name, x, 65 + region.offset * 5, { "font-size": "4", "text-anchor": "middle", "dominant-baseline": "central" });
         }
 
         let counting = 0;
