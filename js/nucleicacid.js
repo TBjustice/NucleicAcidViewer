@@ -1,10 +1,10 @@
-function DNARegion(s, e, name) {
+function DNARegion(s, e, name, color = "#ffffff", shape = 0, offset = 0) {
     this.s = s;             //Start point
     this.e = e;             //End point
     this.name = name;       //Name
-    this.color = "#ffffff"; //Color
-    this.shape = 0;         //0 for Box : 1 for arrow forward : 2 for arrow backward
-    this.offset = 0;        //Place to show box. Positive->outside/up. Negative->inside/down
+    this.color = color; //Color
+    this.shape = shape;         //0 for Box : 1 for arrow forward : 2 for arrow backward
+    this.offset = offset;        //Place to show box. Positive->outside/up. Negative->inside/down
 }
 
 class NucleicAcid {
@@ -90,7 +90,12 @@ class NucleicAcid {
                     const e = parseInt(actiondata[1].replace(/\D/g, ""));
                     const linesub = line.substring(21);
                     const name = linesub.substring(linesub.indexOf("gene=") + 6).split("\"")[0];
-                    this.region.push(new DNARegion(s, e, name));
+                    if (action.indexOf("complement") != -1) {
+                        this.region.push(new DNARegion(s, e, name, "#ffffff", 2));
+                    }
+                    else {
+                        this.region.push(new DNARegion(s, e, name, "#ffffff",1));
+                    }
                     action = "";
                 }
             }

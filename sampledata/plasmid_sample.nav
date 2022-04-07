@@ -6,8 +6,8 @@ plasmid
 25,750,region1,#ffffff,0,0
 800,1000,region2,#028831,0,0
 1200,1700,region3 1,#ff0000,0,0
-1300,1600,region3 2,#8778f7,0,1
-1400,2000,region3 3,#ffffff,0,-1
+1300,1600,region3 2,#8778f7,1,1
+1400,2000,region3 3,#ffffff,2,-1
 2500,3000,region4,#00d5ff,0,0
 3700,4500,region5,#09ae32,0,0
 @sequence

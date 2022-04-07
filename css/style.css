@@ -95,6 +95,7 @@ div[id="control"] {
 
     .menu-input:checked + label + div {
         max-height: 100vh;
+        overflow-y: auto;
         opacity: 1;
     }
 
