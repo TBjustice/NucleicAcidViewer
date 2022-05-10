@@ -67,7 +67,7 @@ function drawMap() {
             let x3 = 50 * Math.sin(data.place2 * Math.PI * 2);
             let y3 = -50 * Math.cos(data.place2 * Math.PI * 2);
 
-            svgtext += SVG.text(data.name + "[" + result[data.name].length + "]" + ":" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "central", "transform": "rotate(" + (data.place2 * 360 - 90) + " " + x + "," + y + ")" });
+            svgtext += SVG.text(data.name + "(" + result[data.name].length + ")" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "central", "transform": "rotate(" + (data.place2 * 360 - 90) + " " + x + "," + y + ")" });
             svgtext += SVG.line(x1, y1, x2, y2, { "stroke": "black", "stroke-width": "0.1" });
             svgtext += SVG.line(x2, y2, x3, y3, { "stroke": "black", "stroke-width": "0.1" });
             svgtext += SVG.line(x3, y3, x, y, { "stroke": "black", "stroke-width": "0.1" });
@@ -84,10 +84,10 @@ function drawMap() {
             let y3 = -72 * Math.cos(data.place2 * Math.PI * 2);
 
             if (key_flag[data.name] == 2) {
-                svgtext += SVG.text(data.name + "[" + result[data.name].length + "]" + ":" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "start", "dominant-baseline": "central", "transform": "rotate(" + (data.place2 * 360 - 90) + " " + x + "," + y + ")" });
+                svgtext += SVG.text(data.name + "(" + result[data.name].length + ")" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "start", "dominant-baseline": "central", "transform": "rotate(" + (data.place2 * 360 - 90) + " " + x + "," + y + ")" });
             }
             else if (key_flag[data.name] == 3) {
-                svgtext += SVG.text(data.name + "[" + result[data.name].length + "]" + ":" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "start", "dominant-baseline": "central", "transform": "rotate(" + (data.place2 * 360 - 90) + " " + x + "," + y + ")", "font-weight": "bold" });
+                svgtext += SVG.text(data.name + "(" + result[data.name].length + ")" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "start", "dominant-baseline": "central", "transform": "rotate(" + (data.place2 * 360 - 90) + " " + x + "," + y + ")", "font-weight": "bold" });
             }
 
             svgtext += SVG.line(x1, y1, x2, y2, { "stroke": "black", "stroke-width": "0.1" });
@@ -109,23 +109,24 @@ function drawMap() {
         }
 
         let counting = 0;
-        svgtext += SVG.text("Enzyme that do cut", 100, -90 + Math.floor(counting / 5) * 3, { "font-size": "3", "text-anchor": "left" });
-        counting += 5;
+        let col_len = 4;
+        svgtext += SVG.text("Enzyme that do cut", 100, -90 + Math.floor(counting / col_len) * 4, { "font-size": "4", "text-anchor": "left" });
+        counting += col_len;
         for (let i = keys.length - 1; i >= 0; i--) {
             let key = keys[i];
             if (result[key].length > 0) {
-                svgtext += SVG.text(key, 100 + 16 * (counting % 5), -90 + Math.floor(counting / 5) * 3, { "font-size": "2", "text-anchor": "left" });
+                svgtext += SVG.text(key, 100 + 20 * (counting % col_len), -90 + Math.floor(counting / col_len) * 4, { "font-size": "3", "text-anchor": "left" });
                 counting++;
             }
         }
-        counting += 10;
-        counting -= counting % 5;
-        svgtext += SVG.text("Enzyme that do NOT cut", 100, -90 + Math.floor(counting / 5) * 3, { "font-size": "3", "text-anchor": "left" });
-        counting += 5;
+        counting += col_len + col_len;
+        counting -= counting % col_len;
+        svgtext += SVG.text("Enzyme that do NOT cut", 100, -90 + Math.floor(counting / col_len) * 4, { "font-size": "4", "text-anchor": "left" });
+        counting += col_len;
         for (let i = keys.length - 1; i >= 0; i--) {
             let key = keys[i];
             if (result[key].length == 0) {
-                svgtext += SVG.text(key, 100 + 16 * (counting % 5), -90 + Math.floor(counting / 5) * 3, { "font-size": "2", "text-anchor": "left" });
+                svgtext += SVG.text(key, 100 + 20 * (counting % col_len), -90 + Math.floor(counting / col_len) * 4, { "font-size": "3", "text-anchor": "left" });
                 counting++;
             }
         }
@@ -152,7 +153,7 @@ function drawMap() {
             let x3 = -130 + 260 * data.place1;
             let y3 = 65;
 
-            svgtext += SVG.text(data.name + "[" + result[data.name].length + "]" + ":" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "central", "transform": "rotate(270 " + x + "," + y + ")" });
+            svgtext += SVG.text(data.name + "(" + result[data.name].length + ")" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "central", "transform": "rotate(270 " + x + "," + y + ")" });
             svgtext += SVG.line(x, y, x1, y1, { "stroke": "black", "stroke-width": "0.1" });
             svgtext += SVG.line(x1, y1, x2, y2, { "stroke": "black", "stroke-width": "0.1" });
             svgtext += SVG.line(x2, y2, x3, y3, { "stroke": "black", "stroke-width": "0.1" });
@@ -169,10 +170,10 @@ function drawMap() {
             let y3 = 65;
 
             if (key_flag[data.name] == 2) {
-                svgtext += SVG.text(data.name + "[" + result[data.name].length + "]" + ":" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "central", "transform": "rotate(90 " + x + "," + y + ")" });
+                svgtext += SVG.text(data.name + "(" + result[data.name].length + ")" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "central", "transform": "rotate(90 " + x + "," + y + ")" });
             }
             else if (key_flag[data.name] == 3) {
-                svgtext += SVG.text(data.name + "[" + result[data.name].length + "]" + ":" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "central", "transform": "rotate(90 " + x + "," + y + ")", "font-weight": "bold" });
+                svgtext += SVG.text(data.name + "(" + result[data.name].length + ")" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "central", "transform": "rotate(90 " + x + "," + y + ")", "font-weight": "bold" });
             }
             svgtext += SVG.line(x, y, x1, y1, { "stroke": "black", "stroke-width": "0.1" });
             svgtext += SVG.line(x1, y1, x2, y2, { "stroke": "black", "stroke-width": "0.1" });
@@ -203,23 +204,24 @@ function drawMap() {
         }
 
         let counting = 0;
-        svgtext += SVG.text("Enzyme that do cut", 0, 110 + Math.floor(counting / 13) * 3, { "font-size": "3", "text-anchor": "middle" });
-        counting += 17;
+        let col_len = 14;
+        svgtext += SVG.text("Enzyme that do cut", 0, 110 + Math.floor(counting / col_len) * 4, { "font-size": "4", "text-anchor": "middle" });
+        counting += col_len;
         for (let i = keys.length - 1; i >= 0; i--) {
             let key = keys[i];
             if (result[key].length > 0) {
-                svgtext += SVG.text(key, -140 + 16 * (counting % 17), 110 + Math.floor(counting / 17) * 3, { "font-size": "2", "text-anchor": "left" });
+                svgtext += SVG.text(key, -140 + 20 * (counting % col_len), 110 + Math.floor(counting / col_len) * 4, { "font-size": "3", "text-anchor": "left" });
                 counting++;
             }
         }
-        counting += 17 * 2;
-        counting -= counting % 17;
-        svgtext += SVG.text("Enzyme that do NOT cut", 0, 110 + Math.floor(counting / 17) * 3, { "font-size": "3", "text-anchor": "middle" });
-        counting += 17;
+        counting += col_len * 2;
+        counting -= counting % col_len;
+        svgtext += SVG.text("Enzyme that do NOT cut", 0, 110 + Math.floor(counting / col_len) * 4, { "font-size": "4", "text-anchor": "middle" });
+        counting += col_len;
         for (let i = keys.length - 1; i >= 0; i--) {
             let key = keys[i];
             if (result[key].length == 0) {
-                svgtext += SVG.text(key, -140 + 16 * (counting % 17), 110 + Math.floor(counting / 17) * 3, { "font-size": "2", "text-anchor": "left" });
+                svgtext += SVG.text(key, -140 + 20 * (counting % col_len), 110 + Math.floor(counting / col_len) * 4, { "font-size": "3", "text-anchor": "left" });
                 counting++;
             }
         }

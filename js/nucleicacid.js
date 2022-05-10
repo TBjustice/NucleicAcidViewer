@@ -126,6 +126,7 @@ function RestrictionEnzymes() {
     this.rebase = {};
     this.fromText = function (text) {
         this.rebase = {};
+        text = text.replace(/\r/g, "");
         lines = text.split('\n');
         var bufarray = [];
         for (var i = lines.length - 1; i >= 0; i--) {
