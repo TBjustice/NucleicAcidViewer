@@ -12,7 +12,7 @@ SVG = {
         for (key in args) {
             text += key + "=\"" + args[key] + "\" ";
         }
-        text += ">" + content + "</text>\n";
+        text += ">" + content.replace(/&/g, "&amp;") + "</text>\n";
         return text;
     },
     line: function (x1, y1, x2, y2, args = {}) {
@@ -67,7 +67,7 @@ SVG = {
         let sy = cy + r * Math.sin(start);
         let ex = cx + r * Math.cos(end);
         let ey = cy + r * Math.sin(end);
-        let textLength = Math.min(fontsize * content.length * 0.5, r * (end - start));
+        let textLength = Math.min(fontsize * content.length * 0.5, r * (end - start)*0.85);
         let text = "<defs><path "
             + "d=\""
             + "M " + sx + " " + sy + " "
@@ -77,7 +77,7 @@ SVG = {
         for (key in args) {
             text += key + "=\"" + args[key] + "\" ";
         }
-        text += ">" + content + "</textPath ></text>\n";
+        text += ">" + content.replace(/&/g, "&amp;") + "</textPath ></text>\n";
         this.arctextId++;
         return text;
     },

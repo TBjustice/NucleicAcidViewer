@@ -67,7 +67,7 @@ function drawMap() {
             let x3 = 50 * Math.sin(data.place2 * Math.PI * 2);
             let y3 = -50 * Math.cos(data.place2 * Math.PI * 2);
 
-            svgtext += SVG.text(data.name + "(" + result[data.name].length + ")" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "central", "transform": "rotate(" + (data.place2 * 360 - 90) + " " + x + "," + y + ")" });
+            svgtext += SVG.text(data.name + "(" + result[data.name].length + ")" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "middle", "transform": "rotate(" + (data.place2 * 360 - 90) + " " + x + "," + y + ")" });
             svgtext += SVG.line(x1, y1, x2, y2, { "stroke": "black", "stroke-width": "0.1" });
             svgtext += SVG.line(x2, y2, x3, y3, { "stroke": "black", "stroke-width": "0.1" });
             svgtext += SVG.line(x3, y3, x, y, { "stroke": "black", "stroke-width": "0.1" });
@@ -84,10 +84,10 @@ function drawMap() {
             let y3 = -72 * Math.cos(data.place2 * Math.PI * 2);
 
             if (key_flag[data.name] == 2) {
-                svgtext += SVG.text(data.name + "(" + result[data.name].length + ")" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "start", "dominant-baseline": "central", "transform": "rotate(" + (data.place2 * 360 - 90) + " " + x + "," + y + ")" });
+                svgtext += SVG.text(data.name + "(" + result[data.name].length + ")" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "start", "dominant-baseline": "middle", "transform": "rotate(" + (data.place2 * 360 - 90) + " " + x + "," + y + ")" });
             }
             else if (key_flag[data.name] == 3) {
-                svgtext += SVG.text(data.name + "(" + result[data.name].length + ")" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "start", "dominant-baseline": "central", "transform": "rotate(" + (data.place2 * 360 - 90) + " " + x + "," + y + ")", "font-weight": "bold" });
+                svgtext += SVG.text(data.name + "(" + result[data.name].length + ")" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "start", "dominant-baseline": "middle", "transform": "rotate(" + (data.place2 * 360 - 90) + " " + x + "," + y + ")", "font-weight": "bold" });
             }
 
             svgtext += SVG.line(x1, y1, x2, y2, { "stroke": "black", "stroke-width": "0.1" });
@@ -97,13 +97,13 @@ function drawMap() {
 
         for (region of nucleicAcid.region) {
             if (region.shape == 0) {
-                svgtext += SVG.arcBand(0, 0, 58 + region.offset * 4, 62 + region.offset * 4, (region.s / len - 0.25) * Math.PI * 2, (region.e / len - 0.25) * Math.PI * 2, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
+                svgtext += SVG.arcBand(0, 0, 58 + region.offset * 4, 63 + region.offset * 4, (region.s / len - 0.25) * Math.PI * 2, (region.e / len - 0.25) * Math.PI * 2, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
             }
             else if (region.shape == 1) {
-                svgtext += SVG.forwardArcArrow(0, 0, 58 + region.offset * 4, 62 + region.offset * 4, (region.s / len - 0.25) * Math.PI * 2, (region.e / len - 0.25) * Math.PI * 2, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
+                svgtext += SVG.forwardArcArrow(0, 0, 58 + region.offset * 4, 63 + region.offset * 4, (region.s / len - 0.25) * Math.PI * 2, (region.e / len - 0.25) * Math.PI * 2, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
             }
             else if (region.shape == 2) {
-                svgtext += SVG.backwardArcArrow(0, 0, 58 + region.offset * 4, 62 + region.offset * 4, (region.s / len - 0.25) * Math.PI * 2, (region.e / len - 0.25) * Math.PI * 2, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
+                svgtext += SVG.backwardArcArrow(0, 0, 58 + region.offset * 4, 63 + region.offset * 4, (region.s / len - 0.25) * Math.PI * 2, (region.e / len - 0.25) * Math.PI * 2, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
             }
             svgtext += SVG.arcText(region.name, 0, 0, 60 + region.offset * 4, (region.s / len - 0.25) * Math.PI * 2, (region.e / len - 0.25) * Math.PI * 2, 4);
         }
@@ -153,7 +153,7 @@ function drawMap() {
             let x3 = -130 + 260 * data.place1;
             let y3 = 65;
 
-            svgtext += SVG.text(data.name + "(" + result[data.name].length + ")" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "central", "transform": "rotate(270 " + x + "," + y + ")" });
+            svgtext += SVG.text(data.name + "(" + result[data.name].length + ")" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "middle", "transform": "rotate(270 " + x + "," + y + ")" });
             svgtext += SVG.line(x, y, x1, y1, { "stroke": "black", "stroke-width": "0.1" });
             svgtext += SVG.line(x1, y1, x2, y2, { "stroke": "black", "stroke-width": "0.1" });
             svgtext += SVG.line(x2, y2, x3, y3, { "stroke": "black", "stroke-width": "0.1" });
@@ -170,10 +170,10 @@ function drawMap() {
             let y3 = 65;
 
             if (key_flag[data.name] == 2) {
-                svgtext += SVG.text(data.name + "(" + result[data.name].length + ")" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "central", "transform": "rotate(90 " + x + "," + y + ")" });
+                svgtext += SVG.text(data.name + "(" + result[data.name].length + ")" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "middle", "transform": "rotate(90 " + x + "," + y + ")" });
             }
             else if (key_flag[data.name] == 3) {
-                svgtext += SVG.text(data.name + "(" + result[data.name].length + ")" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "central", "transform": "rotate(90 " + x + "," + y + ")", "font-weight": "bold" });
+                svgtext += SVG.text(data.name + "(" + result[data.name].length + ")" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "middle", "transform": "rotate(90 " + x + "," + y + ")", "font-weight": "bold" });
             }
             svgtext += SVG.line(x, y, x1, y1, { "stroke": "black", "stroke-width": "0.1" });
             svgtext += SVG.line(x1, y1, x2, y2, { "stroke": "black", "stroke-width": "0.1" });
@@ -197,7 +197,7 @@ function drawMap() {
             svgtext += SVG.text(region.name, x, 65 + region.offset * 4, {
                 "font-size": "4",
                 "text-anchor": "middle",
-                "dominant-baseline": "central",
+                "dominant-baseline": "middle",
                 "lengthAdjust": "spacingAndGlyphs",
                 "textLength": "" + textLength
             });
