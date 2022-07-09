@@ -51,9 +51,8 @@ function drawMap() {
         outerRing.run(true);
 
         svg.setAttribute("viewBox", "-100 -100 283 200");
-        svgtext += SVG.text(nucleicAcid.name, 0, 0, { "font-size": "8", "text-anchor": "middle" });
-        svgtext += SVG.text(nucleicAcid.name, 0, 0, { "font-size": "8", "text-anchor": "middle" });
-        svgtext += SVG.text("" + nucleicAcid.sequence.length + "Bp", 0, 10, { "font-size": "7", "text-anchor": "middle" });
+        svgtext += SVG.text(nucleicAcid.name, 41, -92, { "font-size": "8", "text-anchor": "middle" });
+        svgtext += SVG.text("" + nucleicAcid.sequence.length + "Bp", 0, 0, { "font-size": "7", "text-anchor": "middle" });
         svgtext += SVG.circle(0, 0, 60, { "fill": "none", "stroke": "black", "stroke-width": "2" });
 
         for (data of innerRing.data) {
@@ -97,36 +96,36 @@ function drawMap() {
 
         for (region of nucleicAcid.region) {
             if (region.shape == 0) {
-                svgtext += SVG.arcBand(0, 0, 58 + region.offset * 4, 63 + region.offset * 4, (region.s / len - 0.25) * Math.PI * 2, (region.e / len - 0.25) * Math.PI * 2, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
+                svgtext += SVG.arcBand(0, 0, 58 + region.offset * 5, 63 + region.offset * 5, (region.s / len - 0.25) * Math.PI * 2, (region.e / len - 0.25) * Math.PI * 2, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
             }
             else if (region.shape == 1) {
-                svgtext += SVG.forwardArcArrow(0, 0, 58 + region.offset * 4, 63 + region.offset * 4, (region.s / len - 0.25) * Math.PI * 2, (region.e / len - 0.25) * Math.PI * 2, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
+                svgtext += SVG.forwardArcArrow(0, 0, 58 + region.offset * 5, 63 + region.offset * 5, (region.s / len - 0.25) * Math.PI * 2, (region.e / len - 0.25) * Math.PI * 2, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
             }
             else if (region.shape == 2) {
-                svgtext += SVG.backwardArcArrow(0, 0, 58 + region.offset * 4, 63 + region.offset * 4, (region.s / len - 0.25) * Math.PI * 2, (region.e / len - 0.25) * Math.PI * 2, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
+                svgtext += SVG.backwardArcArrow(0, 0, 58 + region.offset * 5, 63 + region.offset * 5, (region.s / len - 0.25) * Math.PI * 2, (region.e / len - 0.25) * Math.PI * 2, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
             }
-            svgtext += SVG.arcText(region.name, 0, 0, 60 + region.offset * 4, (region.s / len - 0.25) * Math.PI * 2, (region.e / len - 0.25) * Math.PI * 2, 4);
+            svgtext += SVG.arcText(region.name, 0, 0, 60 + region.offset * 5, (region.s / len - 0.25) * Math.PI * 2, (region.e / len - 0.25) * Math.PI * 2, 4);
         }
 
         let counting = 0;
         let col_len = 4;
-        svgtext += SVG.text("Enzyme that do cut", 100, -90 + Math.floor(counting / col_len) * 4, { "font-size": "4", "text-anchor": "left" });
+        svgtext += SVG.text("Enzyme that do cut", 100, -84 + Math.floor(counting / col_len) * 4, { "font-size": "4", "text-anchor": "left" });
         counting += col_len;
         for (let i = keys.length - 1; i >= 0; i--) {
             let key = keys[i];
             if (result[key].length > 0) {
-                svgtext += SVG.text(key, 100 + 20 * (counting % col_len), -90 + Math.floor(counting / col_len) * 4, { "font-size": "3", "text-anchor": "left" });
+                svgtext += SVG.text(key, 100 + 20 * (counting % col_len), -84 + Math.floor(counting / col_len) * 4, { "font-size": "3", "text-anchor": "left" });
                 counting++;
             }
         }
         counting += col_len + col_len;
         counting -= counting % col_len;
-        svgtext += SVG.text("Enzyme that do NOT cut", 100, -90 + Math.floor(counting / col_len) * 4, { "font-size": "4", "text-anchor": "left" });
+        svgtext += SVG.text("Enzyme that do NOT cut", 100, -84 + Math.floor(counting / col_len) * 4, { "font-size": "4", "text-anchor": "left" });
         counting += col_len;
         for (let i = keys.length - 1; i >= 0; i--) {
             let key = keys[i];
             if (result[key].length == 0) {
-                svgtext += SVG.text(key, 100 + 20 * (counting % col_len), -90 + Math.floor(counting / col_len) * 4, { "font-size": "3", "text-anchor": "left" });
+                svgtext += SVG.text(key, 100 + 20 * (counting % col_len), -84 + Math.floor(counting / col_len) * 4, { "font-size": "3", "text-anchor": "left" });
                 counting++;
             }
         }
@@ -185,16 +184,16 @@ function drawMap() {
             let x2 = -130 + 260 * region.e / len;
             let x = (x1 + x2) * 0.50;
             if (region.shape == 0) {
-                svgtext += SVG.rect(x1, 63 + region.offset * 4, x2 - x1, 4, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
+                svgtext += SVG.rect(x1, 62 + region.offset * 5, x2 - x1, 5, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
             }
             else if (region.shape == 1) {
-                svgtext += SVG.forwardArrow(x1, 63 + region.offset * 4, x2 - x1, 4, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
+                svgtext += SVG.forwardArrow(x1, 62 + region.offset * 5, x2 - x1, 5, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
             }
             else if (region.shape == 2) {
-                svgtext += SVG.backwardArrow(x1, 63 + region.offset * 4, x2 - x1, 4, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
+                svgtext += SVG.backwardArrow(x1, 62 + region.offset * 5, x2 - x1, 5, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
             }
             const textLength = Math.min(4 * region.name.length * 0.5, (x2 - x1) * 0.9);
-            svgtext += SVG.text(region.name, x, 65 + region.offset * 4, {
+            svgtext += SVG.text(region.name, x, 65 + region.offset * 5, {
                 "font-size": "4",
                 "text-anchor": "middle",
                 "dominant-baseline": "middle",
