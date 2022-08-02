@@ -304,18 +304,24 @@ async function filesSelected() {
         alert("Please Select 2 Files.");
         return;
     }
+
     let text = await readFile(rebasefile);
-    restrictionEnzymes.fromText(text);
+    let name = rebasefile.name.toLowerCase();
+    if(name.endsWith(".csv")) restrictionEnzymes.fromCSV(text);
+    else{
+        alert("Error! Rebase file must be .csv");
+        return;
+    }
 
     text = await readFile(sequencefile);
-    const name = sequencefile.name.toLowerCase();
+    name = sequencefile.name.toLowerCase();
     if (name.endsWith(".nav")) nucleicAcid.fromNav(text);
     else if (name.endsWith(".gb")) nucleicAcid.fromGb(text);
     else {
         alert("Error! Sequence file must be .gb or .nav");
         return;
     }
-    onTextLoaded();
+    //onTextLoaded();
 }
 
 

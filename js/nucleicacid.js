@@ -186,3 +186,54 @@ function RestrictionEnzymes() {
         return result;
     };
 }
+
+function RestrictionEnzymes() {
+    this.rebase = {};
+    this.fromCSV = function (text) {
+        this.rebase = {};
+        text = text.replace(/\r/g, "");
+        lines = text.split('\n');
+        for (const line of lines){
+            const data = line.split(",");
+            if(data.length >= 2){
+                this.rebase[data[0]]={seq:data[1],met:[]};
+                for(let i=2;i<data.length;i++){
+                    if(data[i].length>0){
+                        this.rebase[data[0]].met.push(data[i]);
+                    }
+                }
+            }
+        }
+    };
+    this.cut = function (nucleicAcid) {
+        let result = {};
+        for (key in this.rebase) {
+            var bufkey = key.replace("^", "");
+            let keylen = bufkey.length;
+            bufkey = bufkey.replace(/R/g, "(A|G)");
+            bufkey = bufkey.replace(/Y/g, "(C|T)");
+            bufkey = bufkey.replace(/W/g, "(A|T)");
+            bufkey = bufkey.replace(/S/g, "(C|G)");
+            bufkey = bufkey.replace(/M/g, "(A|C)");
+            bufkey = bufkey.replace(/K/g, "(G|T)");
+            bufkey = bufkey.replace(/D/g, "(A|G|T)");
+            bufkey = bufkey.replace(/H/g, "(A|C|T)");
+            bufkey = bufkey.replace(/V/g, "(A|C|G)");
+            bufkey = bufkey.replace(/B/g, "(C|G|T)");
+            bufkey = bufkey.replace(/N/g, "(A|C|G|T)");
+            for (var i = 0; i < this.rebase[key].length; i++) {
+                if (!Object.keys(result).includes(this.rebase[key][i])) result[this.rebase[key][i]] = [];
+            }
+            var idx;
+            var re = new RegExp(bufkey, 'g');
+            var sequenceCode = nucleicAcid.sequence;
+            if (nucleicAcid.type == "circular" || nucleicAcid.type == "plasmid") sequenceCode += nucleicAcid.sequence.slice(0, keylen - 1);
+            while (idx = re.exec(sequenceCode)) {
+                for (var i = 0; i < this.rebase[key].length; i++) {
+                    result[this.rebase[key][i]].push(idx.index);
+                }
+            }
+        }
+        return result;
+    };
+}
