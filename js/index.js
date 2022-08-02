@@ -245,6 +245,9 @@ function drawMap() {
 
 function onTextLoaded() {
     const result = restrictionEnzymes.cut(nucleicAcid);
+    
+    console.log(result);
+    return;
 
     let singleMatch = document.getElementById("singleMatch");
     singleMatch.innerHTML = "";
@@ -321,7 +324,7 @@ async function filesSelected() {
         alert("Error! Sequence file must be .gb or .nav");
         return;
     }
-    //onTextLoaded();
+    onTextLoaded();
 }
 
 
