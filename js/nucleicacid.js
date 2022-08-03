@@ -166,13 +166,12 @@ function RestrictionEnzymes() {
             if (nucleicAcid.type == "circular" || nucleicAcid.type == "plasmid") sequence += sequence.slice(0, keylen-1);
             while (idx = reg.exec(sequence)) {
                 let ioc=(idx.index+this.rebase[enzyme].target.indexOf("^"))%seqlen;
-                result[enzyme].push({name:enzyme,index:idx.index,ioc:ioc,met:false});
+                result[enzyme].push({index:idx.index,ioc:ioc,met:false});
                 for (const metseq of this.rebase[enzyme].met) {
                     const reg2 = this.toReg(metseq);
                     let sequence2 = nucleicAcid.sequence.concat();
                     if (nucleicAcid.type == "circular" || nucleicAcid.type == "plasmid") sequence2 += sequence2.slice(0, metseq.replace("^", "").length-1);
                     while (idx2 = reg2.exec(sequence2)) {
-                        console.log(idx2.index,metseq,metseq.indexOf("^"));
                         if(ioc == (idx2.index+metseq.indexOf("^"))%seqlen){
                             result[enzyme][result[enzyme].length-1].met=true;
                             break;

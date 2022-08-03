@@ -2,13 +2,14 @@ let svg = null;
 const nucleicAcid = new NucleicAcid();
 const restrictionEnzymes = new RestrictionEnzymes();
 let key_flag = {};
+let result = {};
 function onLoad() {
     svg = document.getElementById("svg");
     onResize();
 }
 
 function onResize() {
-    if (svg == null) return;
+    if (svg==null) return;
     const size = Math.min(window.innerHeight, window.innerWidth * 0.6 / 1.41421356);
     svg.setAttribute("width", (size * 1.41421356) + "px");
     svg.setAttribute("height", size + "px");
@@ -24,38 +25,36 @@ function readFile(blob) {
 }
 
 function drawMap() {
-    const result = restrictionEnzymes.cut(nucleicAcid);
     svgtext = "";
     let keys = Object.keys(result);
     let len = nucleicAcid.sequence.length;
     innerRing = new Placer();
     outerRing = new Placer();
     //**************************************************************************
-    for (let i = 0; i < keys.length; i++) {
-        let key = keys[i];
-        if (key_flag[key] == 1) {
-            for (let j = 0; j < result[key].length; j++) {
-                innerRing.add(key, result[key][j] / len);
+    for (const enzyme in key_flag) {
+        if (key_flag[enzyme]==1) {
+            for (let j = 0; j < result[enzyme].length; j++) {
+                innerRing.add(enzyme, result[enzyme][j].index/len,result[enzyme][j].index, result[enzyme][j].met);
             }
         }
-        else if (key_flag[key] == 2 || key_flag[key] == 3) {
-            for (let j = 0; j < result[key].length; j++) {
-                outerRing.add(key, result[key][j] / len);
+        else if (key_flag[enzyme]==2 || key_flag[enzyme]==3) {
+            for (let j = 0; j < result[enzyme].length; j++) {
+                outerRing.add(enzyme, result[enzyme][j].index/len,result[enzyme][j].index, result[enzyme][j].met);
             }
         }
     }
-    if (nucleicAcid.type == "plasmid" || nucleicAcid.type == "circular") {
+    if (nucleicAcid.type=="plasmid" || nucleicAcid.type=="circular") {
         innerRing.space = 0.01;
         outerRing.space = 0.005;
-        innerRing.run(true);
-        outerRing.run(true);
+        innerRing.run();
+        outerRing.run();
 
         svg.setAttribute("viewBox", "-100 -100 283 200");
         svgtext += SVG.text(nucleicAcid.name, 41, -92, { "font-size": "8", "text-anchor": "middle" });
         svgtext += SVG.text("" + nucleicAcid.sequence.length + "Bp", 0, 0, { "font-size": "7", "text-anchor": "middle" });
         svgtext += SVG.circle(0, 0, 60, { "fill": "none", "stroke": "black", "stroke-width": "2" });
-
-        for (data of innerRing.data) {
+        
+        for (const data of innerRing.data) {
             let x = 48 * Math.sin(data.place2 * Math.PI * 2);
             let y = -48 * Math.cos(data.place2 * Math.PI * 2);
 
@@ -65,13 +64,15 @@ function drawMap() {
             let y2 = -53 * Math.cos(data.place1 * Math.PI * 2);
             let x3 = 50 * Math.sin(data.place2 * Math.PI * 2);
             let y3 = -50 * Math.cos(data.place2 * Math.PI * 2);
-
-            svgtext += SVG.text(data.name + "(" + result[data.name].length + ")" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "middle", "transform": "rotate(" + (data.place2 * 360 - 90) + " " + x + "," + y + ")" });
+            let name = data.name;
+            if(data.met)name+="*";
+            if(result[data.name].length==1)svgtext += SVG.text(name + " " + (data.index+1), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "middle", "transform": "rotate(" + (data.place2 * 360 - 90) + " " + x + "," + y + ")" });
+            else svgtext += SVG.text(name + " (" + result[data.name].length + ") " + (data.index+1), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "middle", "transform": "rotate(" + (data.place2 * 360 - 90) + " " + x + "," + y + ")" });
             svgtext += SVG.line(x1, y1, x2, y2, { "stroke": "black", "stroke-width": "0.1" });
             svgtext += SVG.line(x2, y2, x3, y3, { "stroke": "black", "stroke-width": "0.1" });
             svgtext += SVG.line(x3, y3, x, y, { "stroke": "black", "stroke-width": "0.1" });
         }
-        for (data of outerRing.data) {
+        for (const data of outerRing.data) {
             let x = 74 * Math.sin(data.place2 * Math.PI * 2);
             let y = -74 * Math.cos(data.place2 * Math.PI * 2);
 
@@ -82,11 +83,15 @@ function drawMap() {
             let x3 = 72 * Math.sin(data.place2 * Math.PI * 2);
             let y3 = -72 * Math.cos(data.place2 * Math.PI * 2);
 
-            if (key_flag[data.name] == 2) {
-                svgtext += SVG.text(data.name + "(" + result[data.name].length + ")" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "start", "dominant-baseline": "middle", "transform": "rotate(" + (data.place2 * 360 - 90) + " " + x + "," + y + ")" });
+            let name = data.name;
+            if(data.met)name+="*";
+            if (key_flag[data.name]==2) {
+                if(result[data.name].length==1)svgtext += SVG.text(name + " " + (data.index+1), x, y, { "font-size": "2.3", "text-anchor": "start", "dominant-baseline": "middle", "transform": "rotate(" + (data.place2 * 360 - 90) + " " + x + "," + y + ")" });
+                else svgtext += SVG.text(name + " (" + result[data.name].length + ") " + (data.index+1), x, y, { "font-size": "2.3", "text-anchor": "start", "dominant-baseline": "middle", "transform": "rotate(" + (data.place2 * 360 - 90) + " " + x + "," + y + ")" });
             }
-            else if (key_flag[data.name] == 3) {
-                svgtext += SVG.text(data.name + "(" + result[data.name].length + ")" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "start", "dominant-baseline": "middle", "transform": "rotate(" + (data.place2 * 360 - 90) + " " + x + "," + y + ")", "font-weight": "bold" });
+            else if (key_flag[data.name]==3) {
+                if(result[data.name].length==1)svgtext += SVG.text(name + " " + (data.index+1), x, y, { "font-size": "2.3", "text-anchor": "start", "dominant-baseline": "middle", "transform": "rotate(" + (data.place2 * 360 - 90) + " " + x + "," + y + ")", "font-weight": "bold" });
+                else svgtext += SVG.text(name + " (" + result[data.name].length + ") " + (data.index+1), x, y, { "font-size": "2.3", "text-anchor": "start", "dominant-baseline": "middle", "transform": "rotate(" + (data.place2 * 360 - 90) + " " + x + "," + y + ")", "font-weight": "bold" });
             }
 
             svgtext += SVG.line(x1, y1, x2, y2, { "stroke": "black", "stroke-width": "0.1" });
@@ -94,14 +99,14 @@ function drawMap() {
             svgtext += SVG.line(x3, y3, x, y, { "stroke": "black", "stroke-width": "0.1" });
         }
 
-        for (region of nucleicAcid.region) {
-            if (region.shape == 0) {
+        for (const region of nucleicAcid.region) {
+            if (region.shape==0) {
                 svgtext += SVG.arcBand(0, 0, 58 + region.offset * 5, 63 + region.offset * 5, (region.s / len - 0.25) * Math.PI * 2, (region.e / len - 0.25) * Math.PI * 2, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
             }
-            else if (region.shape == 1) {
+            else if (region.shape==1) {
                 svgtext += SVG.forwardArcArrow(0, 0, 58 + region.offset * 5, 63 + region.offset * 5, (region.s / len - 0.25) * Math.PI * 2, (region.e / len - 0.25) * Math.PI * 2, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
             }
-            else if (region.shape == 2) {
+            else if (region.shape==2) {
                 svgtext += SVG.backwardArcArrow(0, 0, 58 + region.offset * 5, 63 + region.offset * 5, (region.s / len - 0.25) * Math.PI * 2, (region.e / len - 0.25) * Math.PI * 2, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
             }
             svgtext += SVG.arcText(region.name, 0, 0, 60 + region.offset * 5, (region.s / len - 0.25) * Math.PI * 2, (region.e / len - 0.25) * Math.PI * 2, 4);
@@ -124,7 +129,7 @@ function drawMap() {
         counting += col_len;
         for (let i = keys.length - 1; i >= 0; i--) {
             let key = keys[i];
-            if (result[key].length == 0) {
+            if (result[key].length==0) {
                 svgtext += SVG.text(key, 100 + 20 * (counting % col_len), -84 + Math.floor(counting / col_len) * 4, { "font-size": "3", "text-anchor": "left" });
                 counting++;
             }
@@ -141,7 +146,7 @@ function drawMap() {
         svgtext += SVG.text("" + nucleicAcid.sequence.length + "Bp", 0, 20, { "font-size": "7", "text-anchor": "middle" });
         svgtext += SVG.line(-130, 65, 130, 65, { "stroke": "black", "stroke-width": "2" });
 
-        for (data of innerRing.data) {
+        for (const data of innerRing.data) {
             let x = -130 + 260 * data.place2;
             let y = 82;
 
@@ -152,12 +157,15 @@ function drawMap() {
             let x3 = -130 + 260 * data.place1;
             let y3 = 65;
 
-            svgtext += SVG.text(data.name + "(" + result[data.name].length + ")" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "middle", "transform": "rotate(270 " + x + "," + y + ")" });
+            let name = data.name;
+            if(data.met)name+="*";
+            if(result[data.name].length==1)svgtext += SVG.text(name + " " + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "middle", "transform": "rotate(270 " + x + "," + y + ")" });
+            else svgtext += SVG.text(name + " (" + result[data.name].length + ") " + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "middle", "transform": "rotate(270 " + x + "," + y + ")" });
             svgtext += SVG.line(x, y, x1, y1, { "stroke": "black", "stroke-width": "0.1" });
             svgtext += SVG.line(x1, y1, x2, y2, { "stroke": "black", "stroke-width": "0.1" });
             svgtext += SVG.line(x2, y2, x3, y3, { "stroke": "black", "stroke-width": "0.1" });
         }
-        for (data of outerRing.data) {
+        for (const data of outerRing.data) {
             let x = -130 + 260 * data.place2;
             let y = 48;
 
@@ -168,28 +176,32 @@ function drawMap() {
             let x3 = -130 + 260 * data.place1;
             let y3 = 65;
 
-            if (key_flag[data.name] == 2) {
-                svgtext += SVG.text(data.name + "(" + result[data.name].length + ")" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "middle", "transform": "rotate(90 " + x + "," + y + ")" });
+            let name = data.name;
+            if(data.met)name+="*";
+            if (key_flag[data.name]==2) {
+                if(result[data.name].length==1)svgtext += SVG.text(name + " " + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "middle", "transform": "rotate(90 " + x + "," + y + ")" });
+                else svgtext += SVG.text(name + " (" + result[data.name].length + ") " + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "middle", "transform": "rotate(90 " + x + "," + y + ")" });
             }
-            else if (key_flag[data.name] == 3) {
-                svgtext += SVG.text(data.name + "(" + result[data.name].length + ")" + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "middle", "transform": "rotate(90 " + x + "," + y + ")", "font-weight": "bold" });
+            else if (key_flag[data.name]==3) {
+                if(result[data.name].length==1)svgtext += SVG.text(name + " " + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "middle", "transform": "rotate(90 " + x + "," + y + ")", "font-weight": "bold" });
+                else svgtext += SVG.text(name + " (" + result[data.name].length + ") " + Math.floor(data.place1 * len + 1.02), x, y, { "font-size": "2.3", "text-anchor": "end", "dominant-baseline": "middle", "transform": "rotate(90 " + x + "," + y + ")", "font-weight": "bold" });
             }
             svgtext += SVG.line(x, y, x1, y1, { "stroke": "black", "stroke-width": "0.1" });
             svgtext += SVG.line(x1, y1, x2, y2, { "stroke": "black", "stroke-width": "0.1" });
             svgtext += SVG.line(x2, y2, x3, y3, { "stroke": "black", "stroke-width": "0.1" });
         }
 
-        for (region of nucleicAcid.region) {
+        for (const region of nucleicAcid.region) {
             let x1 = -130 + 260 * region.s / len;
             let x2 = -130 + 260 * region.e / len;
             let x = (x1 + x2) * 0.50;
-            if (region.shape == 0) {
+            if (region.shape==0) {
                 svgtext += SVG.rect(x1, 62 + region.offset * 5, x2 - x1, 5, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
             }
-            else if (region.shape == 1) {
+            else if (region.shape==1) {
                 svgtext += SVG.forwardArrow(x1, 62 + region.offset * 5, x2 - x1, 5, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
             }
-            else if (region.shape == 2) {
+            else if (region.shape==2) {
                 svgtext += SVG.backwardArrow(x1, 62 + region.offset * 5, x2 - x1, 5, { "fill": region.color, "stroke": "black", "stroke-width": "0.2" });
             }
             const textLength = Math.min(4 * region.name.length * 0.5, (x2 - x1) * 0.9);
@@ -219,7 +231,7 @@ function drawMap() {
         counting += col_len;
         for (let i = keys.length - 1; i >= 0; i--) {
             let key = keys[i];
-            if (result[key].length == 0) {
+            if (result[key].length==0) {
                 svgtext += SVG.text(key, -140 + 20 * (counting % col_len), 110 + Math.floor(counting / col_len) * 4, { "font-size": "3", "text-anchor": "left" });
                 counting++;
             }
@@ -244,34 +256,29 @@ function drawMap() {
 }
 
 function onTextLoaded() {
-    const result = restrictionEnzymes.cut(nucleicAcid);
-    
-    console.log(result);
-    return;
-
+    result = restrictionEnzymes.cut(nucleicAcid);
     let singleMatch = document.getElementById("singleMatch");
     singleMatch.innerHTML = "";
     let severalMatch = document.getElementById("severalMatch");
     severalMatch.innerHTML = "";
     let ManyMatch = document.getElementById("manyMatch");
     ManyMatch.innerHTML = "";
-    key_flag = {};
-    keys = Object.keys(result).sort();
-    for (key of keys) {
-        if (result[key].length == 0) {
-            key_flag[key] = 0;
+
+    for (const enzyme in result) {
+        if (result[enzyme].length==0) {
+            key_flag[enzyme] = 0;
         }
-        else if (result[key].length == 1) {
-            key_flag[key] = 1;
-            singleMatch.innerHTML += "<option value=\"" + key + "\">" + key + "</option>";
+        else if (result[enzyme].length==1) {
+            key_flag[enzyme] = 1;
+            singleMatch.innerHTML += "<option value=\"" + enzyme + "\">" + enzyme + "</option>";
         }
-        else if (2 <= result[key].length && result[key].length <= 3) {
-            key_flag[key] = 2;
-            severalMatch.innerHTML += "<option value=\"" + key + "\">" + key + "</option>";
+        else if (2 <= result[enzyme].length && result[enzyme].length <= 3) {
+            key_flag[enzyme] = 2;
+            severalMatch.innerHTML += "<option value=\"" + enzyme + "\">" + enzyme + "</option>";
         }
         else {
-            key_flag[key] = 4;
-            ManyMatch.innerHTML += "<option value=\"" + key + "\">" + key + "</option>";
+            key_flag[enzyme] = 4;
+            ManyMatch.innerHTML += "<option value=\"" + enzyme + "\">" + enzyme + "</option>";
         }
     }
 
@@ -283,10 +290,10 @@ function onTextLoaded() {
         text += "<summary>" + region.name + "(" + region.s + " to " + region.e + ")" + "</summary>\n"
         text += "<p>color:<input type=\"color\" value=\"" + region.color + "\" onchange=\"onRegionDataChanged(0,this," + i + ")\"/></p>";
         text += "<p>offset:<input type=\"number\" value=\"0\" step=\"0.5\" onchange=\"onRegionDataChanged(1,this," + i + ")\"/></p>";
-        if (region.shape == 1) {
+        if (region.shape==1) {
             text += "<p>arrow:<select onchange=\"onRegionDataChanged(2,this," + i + ")\"><option>None</option><option selected>Forward</option><option>Backward</option></select></p>";
         }
-        else if (region.shape == 2) {
+        else if (region.shape==2) {
             text += "<p>arrow:<select onchange=\"onRegionDataChanged(2,this," + i + ")\"><option>None</option><option>Forward</option><option selected>Backward</option></select></p>";
         }
         else {
@@ -353,13 +360,13 @@ function enzymeOptionClicked(data) {
 }
 
 function onRegionDataChanged(type, element, idx) {
-    if (type == 0) {
+    if (type==0) {
         nucleicAcid.region[idx].color = element.value;
     }
-    else if (type == 1) {
+    else if (type==1) {
         nucleicAcid.region[idx].offset = parseFloat(element.value);
     }
-    else if (type == 2) {
+    else if (type==2) {
         nucleicAcid.region[idx].shape = element.selectedIndex;
     }
     drawMap();

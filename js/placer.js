@@ -1,10 +1,10 @@
 class Placer {
     space = 0.01;
     data = [];
-    add(name, place) {
-        this.data.push({ name: name, place1: place, place2: place });
+    add(name, place, index, met) {
+        this.data.push({ name: name, place1: place, place2: place , index: index, met: met});
     }
-    run(circular = false) {
+    run() {
         const datasize = this.data.length;
         if (datasize * this.space > 1) {
             console.log("Too many data to show!")
