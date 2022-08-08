@@ -124,63 +124,62 @@ class NucleicAcid {
 
 function RestrictionEnzymes() {
     this.rebase = {};
-    this.fromText = function (text) {
+    this.fromCSV = function (text) {
         this.rebase = {};
         text = text.replace(/\r/g, "");
         lines = text.split('\n');
-        var bufarray = [];
-        for (var i = lines.length - 1; i >= 0; i--) {
-            if (lines[i].length == 0) continue;
-            if (lines[i][0] == '#') continue;
-            line = (lines[i].replace(/\s{2,}/g, " ")).split(" ");
-            if (line[0].length == 0) break;
-            if (lines[i].indexOf(')') - lines[i].indexOf('(') > 0) continue;
-            for (var j = line.length - 1; j > 0; j--) {
-                if (line[j].length == 0) {
-                    continue;
-                }
-                else if (line[j].indexOf('(') >= 0) {
-                    line.splice(j, 1);
-                }
-                else {
-                    if (bufarray.indexOf(line[j]) < 0) {
-                        bufarray.push(line[j]);
-                        this.rebase[line[j]] = [line[0]];
-                    }
-                    else {
-                        this.rebase[line[j]].push(line[0]);
+        for (const line of lines){
+            const data = line.split(",");
+            if(data.length >= 2){
+                this.rebase[data[0]]={target:data[1],met:[]};
+                for(let i=2;i<data.length;i++){
+                    if(data[i].length>0){
+                        this.rebase[data[0]].met.push(data[i]);
                     }
                 }
             }
         }
     };
+    this.toReg = function(text){
+        text = text.replace("^", "");
+        text = text.replace(/R/g, "(A|G)");
+        text = text.replace(/Y/g, "(C|T)");
+        text = text.replace(/W/g, "(A|T)");
+        text = text.replace(/S/g, "(C|G)");
+        text = text.replace(/M/g, "(A|C)");
+        text = text.replace(/K/g, "(G|T)");
+        text = text.replace(/D/g, "(A|G|T)");
+        text = text.replace(/H/g, "(A|C|T)");
+        text = text.replace(/V/g, "(A|C|G)");
+        text = text.replace(/B/g, "(C|G|T)");
+        text = text.replace(/N/g, "(A|C|G|T)");
+        return new RegExp(text, 'g');
+    };
     this.cut = function (nucleicAcid) {
         let result = {};
-        for (key in this.rebase) {
-            var bufkey = key.replace("^", "");
-            let keylen = bufkey.length;
-            bufkey = bufkey.replace(/R/g, "(A|G)");
-            bufkey = bufkey.replace(/Y/g, "(C|T)");
-            bufkey = bufkey.replace(/W/g, "(A|T)");
-            bufkey = bufkey.replace(/S/g, "(C|G)");
-            bufkey = bufkey.replace(/M/g, "(A|C)");
-            bufkey = bufkey.replace(/K/g, "(G|T)");
-            bufkey = bufkey.replace(/D/g, "(A|G|T)");
-            bufkey = bufkey.replace(/H/g, "(A|C|T)");
-            bufkey = bufkey.replace(/V/g, "(A|C|G)");
-            bufkey = bufkey.replace(/B/g, "(C|G|T)");
-            bufkey = bufkey.replace(/N/g, "(A|C|G|T)");
-            for (var i = 0; i < this.rebase[key].length; i++) {
-                if (!Object.keys(result).includes(this.rebase[key][i])) result[this.rebase[key][i]] = [];
-            }
-            var idx;
-            var re = new RegExp(bufkey, 'g');
-            var sequenceCode = nucleicAcid.sequence;
-            if (nucleicAcid.type == "circular" || nucleicAcid.type == "plasmid") sequenceCode += nucleicAcid.sequence.slice(0, keylen - 1);
-            while (idx = re.exec(sequenceCode)) {
-                for (var i = 0; i < this.rebase[key].length; i++) {
-                    result[this.rebase[key][i]].push(idx.index);
+        const seqlen = nucleicAcid.sequence.length;
+        for (const enzyme in this.rebase){
+            result[enzyme] = [];
+            const keylen = this.rebase[enzyme].target.replace("^", "").length;
+            const reg = this.toReg(this.rebase[enzyme].target);
+            let sequence = nucleicAcid.sequence.concat();
+            if (nucleicAcid.type == "circular" || nucleicAcid.type == "plasmid") sequence += sequence.slice(0, keylen-1);
+            while (idx = reg.exec(sequence)) {
+                let ioc=(idx.index+this.rebase[enzyme].target.indexOf("^"))%seqlen;
+                result[enzyme].push({index:idx.index,ioc:ioc,met:false});
+                for (const metseq of this.rebase[enzyme].met) {
+                    const reg2 = this.toReg(metseq);
+                    let sequence2 = nucleicAcid.sequence.concat();
+                    if (nucleicAcid.type == "circular" || nucleicAcid.type == "plasmid") sequence2 += sequence2.slice(0, metseq.replace("^", "").length-1);
+                    while (idx2 = reg2.exec(sequence2)) {
+                        if(ioc == (idx2.index+metseq.indexOf("^"))%seqlen){
+                            result[enzyme][result[enzyme].length-1].met=true;
+                            break;
+                        }
+                        reg2.lastIndex-=metseq.replace("^", "").length-1;
+                    }
                 }
+                reg.lastIndex-=keylen-1;
             }
         }
         return result;
