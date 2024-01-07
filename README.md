@@ -1,10 +1,10 @@
 # NucleicAcidViewer
-The tool to visualize restriction enzyme site of nucleic acid.
+A visualizer of restriction enzyme sites in nucleic acid.
 ## What is NucleicAcidViewer?
 It is a JavaScript-base visualizer of restriction enzyme site. Here is the sample of output image.
 ![sampleresult](sampledata/result_plasmid.svg)
 ## How can I use?
-Just open https://tbjustice.github.io/NucleicAcidViewer/ and you can use NucleicAcidViewer!! Or you can clone this project and open "index.html" by browser (Chrome).
+Just open https://tbjustice.github.io/NucleicAcidViewer/ and you can use NucleicAcidViewer! Or you can clone this project and open "index.html" by browser (Chrome).
 ## How to use?
 1. Create the database of restriction enzymes. Database must be in csv format. Enzyme name is written in the first column, and the target sequence is written in the second column. Columns after third column refers to the sequence which may NOT be cut by the enzyme (because of methylation).
 2. Prepare the sequence data in the Genbank format or nav format.
